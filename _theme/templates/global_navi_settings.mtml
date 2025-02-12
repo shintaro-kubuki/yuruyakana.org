@@ -1,0 +1,47 @@
+<$mt:BlogName encode_html="1" setvar="theme_name"$>
+
+<mt:Var
+  name="theme_nav_logo"
+  editor:label="ロゴ画像"
+  editor:type="image"
+  editor:update:attribute="src"
+  editor:update:selector=".MTSE-nav-logo img"
+  editor:if:value="<img>"
+  editor:if:empty="$theme_name"
+  editor:register="0"
+>
+
+
+<mt:SetVarBlock name="theme_main_menu_item_template">
+  <li class="nav-item MTSE-main-menu-item">
+    <a class="nav-link MTSE-main-menu-item__title MTSE-main-menu-item__url"></a>
+  </li>
+</mt:SetVarBlock>
+<mt:Var
+  name="theme_main_menu_items"
+  editor:label="グローバルナビゲーションに表示するウェブページ"
+  editor:type="list"
+  editor:update:selector=".MTSE-main-menu-item"
+  editor:update:html="$theme_main_menu_item_template"
+  editor:update:parent:selector=".MTSE-main-menu"
+  editor:register="0"
+>
+
+<hr>
+
+<p>誘導ボタン</p>
+<p>お問い合わせページなどへの誘導ボタンを設定できます。</p>
+<mt:Var 
+  name="theme_CTA_button_text"
+  editor:label="テキスト"
+  editor:type="text"
+  default="お問い合わせ"
+  editor:register="0"
+>
+<mt:Var 
+  name="theme_CTA_button_url"
+  editor:label="URL"
+  editor:type="text"
+  default="/contact/"
+  editor:register="0"
+>

@@ -1,0 +1,499 @@
+id: "yuruyakana"
+label: "yuruyakana"
+version: "1.0.0"
+author_link: "https://yuruyakana.org/"
+author_name: "ゆるやかな合同WEB勉強会"
+description: "yuruyakana"
+class: "blog"
+elements:
+  block_display_options:
+    component: ~
+    data:
+      page:
+        core-columns:
+          order: 17
+          panel: 0
+          shortcut: 0
+        core-horizontalrule:
+          order: 21
+          panel: 1
+          shortcut: 0
+        core-html:
+          order: 20
+          panel: 1
+          shortcut: 0
+        core-table:
+          order: 15
+          panel: 0
+          shortcut: 0
+        core-text:
+          order: 0
+          panel: 1
+          shortcut: 1
+        custom-CTA:
+          order: 14
+          panel: 1
+          shortcut: 0
+        custom-accordion:
+          order: 8
+          panel: 1
+          shortcut: 0
+        custom-accordion_item:
+          order: 9
+          panel: 0
+          shortcut: 0
+        custom-button:
+          order: 4
+          panel: 1
+          shortcut: 0
+        custom-chat_item:
+          order: 7
+          panel: 0
+          shortcut: 0
+        custom-chats:
+          order: 6
+          panel: 1
+          shortcut: 0
+        custom-code:
+          order: 5
+          panel: 1
+          shortcut: 0
+        custom-file:
+          order: 12
+          panel: 1
+          shortcut: 0
+        custom-image:
+          order: 2
+          panel: 1
+          shortcut: 1
+        custom-link:
+          order: 3
+          panel: 1
+          shortcut: 0
+        custom-multi_columns:
+          order: 18
+          panel: 1
+          shortcut: 0
+        custom-pdf:
+          order: 10
+          panel: 1
+          shortcut: 0
+        custom-section:
+          order: 13
+          panel: 1
+          shortcut: 0
+        custom-table_responsive:
+          order: 16
+          panel: 1
+          shortcut: 0
+        mt-file:
+          order: 11
+          panel: 0
+          shortcut: 0
+        mt-image:
+          order: 1
+          panel: 0
+          shortcut: 0
+        sixapart-oembed:
+          order: 19
+          panel: 1
+          shortcut: 0
+      post:
+        core-columns:
+          order: 17
+          panel: 0
+          shortcut: 0
+        core-horizontalrule:
+          order: 21
+          panel: 1
+          shortcut: 0
+        core-html:
+          order: 20
+          panel: 1
+          shortcut: 0
+        core-table:
+          order: 15
+          panel: 0
+          shortcut: 0
+        core-text:
+          order: 0
+          panel: 1
+          shortcut: 1
+        custom-CTA:
+          order: 14
+          panel: 1
+          shortcut: 0
+        custom-accordion:
+          order: 8
+          panel: 1
+          shortcut: 0
+        custom-accordion_item:
+          order: 9
+          panel: 0
+          shortcut: 0
+        custom-button:
+          order: 4
+          panel: 1
+          shortcut: 0
+        custom-chat_item:
+          order: 7
+          panel: 0
+          shortcut: 0
+        custom-chats:
+          order: 6
+          panel: 1
+          shortcut: 0
+        custom-code:
+          order: 5
+          panel: 1
+          shortcut: 0
+        custom-file:
+          order: 12
+          panel: 1
+          shortcut: 0
+        custom-image:
+          order: 2
+          panel: 1
+          shortcut: 1
+        custom-link:
+          order: 3
+          panel: 1
+          shortcut: 0
+        custom-multi_columns:
+          order: 18
+          panel: 1
+          shortcut: 0
+        custom-pdf:
+          order: 10
+          panel: 1
+          shortcut: 0
+        custom-section:
+          order: 13
+          panel: 1
+          shortcut: 0
+        custom-table_responsive:
+          order: 16
+          panel: 1
+          shortcut: 0
+        mt-file:
+          order: 11
+          panel: 0
+          shortcut: 0
+        mt-image:
+          order: 1
+          panel: 0
+          shortcut: 0
+        sixapart-oembed:
+          order: 19
+          panel: 1
+          shortcut: 0
+      thumbnail-image:
+        core-columns:
+          order: 7
+          panel: 0
+          shortcut: 0
+        core-horizontalrule:
+          order: 5
+          panel: 0
+          shortcut: 0
+        core-html:
+          order: 3
+          panel: 0
+          shortcut: 0
+        core-table:
+          order: 6
+          panel: 0
+          shortcut: 0
+        core-text:
+          order: 0
+          panel: 0
+          shortcut: 0
+        custom-CTA:
+          order: 9
+          panel: 0
+          shortcut: 0
+        custom-accordion:
+          order: 15
+          panel: 0
+          shortcut: 0
+        custom-accordion_item:
+          order: 14
+          panel: 0
+          shortcut: 0
+        custom-button:
+          order: 8
+          panel: 0
+          shortcut: 0
+        custom-chat_item:
+          order: 17
+          panel: 0
+          shortcut: 0
+        custom-chats:
+          order: 20
+          panel: 0
+          shortcut: 0
+        custom-code:
+          order: 16
+          panel: 0
+          shortcut: 0
+        custom-file:
+          order: 21
+          panel: 0
+          shortcut: 0
+        custom-image:
+          order: 11
+          panel: 0
+          shortcut: 0
+        custom-link:
+          order: 19
+          panel: 0
+          shortcut: 0
+        custom-multi_columns:
+          order: 13
+          panel: 0
+          shortcut: 0
+        custom-pdf:
+          order: 18
+          panel: 0
+          shortcut: 0
+        custom-section:
+          order: 10
+          panel: 0
+          shortcut: 0
+        custom-table_responsive:
+          order: 12
+          panel: 0
+          shortcut: 0
+        mt-file:
+          order: 2
+          panel: 0
+          shortcut: 0
+        mt-image:
+          order: 1
+          panel: 0
+          shortcut: 0
+        sixapart-oembed:
+          order: 4
+          panel: 0
+          shortcut: 0
+    importer: block_display_options
+  block_editor_blocks:
+    component: block_editor
+    data:
+      CTA:
+        label: "ボタン付きセクション"
+        scope: blog
+      accordion:
+        label: "アコーディオン"
+        scope: blog
+      accordion_item:
+        label: "アコーディオンアイテム"
+        scope: blog
+      button:
+        label: "ボタン"
+        scope: blog
+      chat_item:
+        label: "チャットアイテム"
+        scope: blog
+      chats:
+        label: "チャット"
+        scope: blog
+      code:
+        label: "コード"
+        scope: blog
+      file:
+        label: "ファイル"
+        scope: blog
+      image:
+        label: "画像"
+        scope: blog
+      link:
+        label: "リンク（スタイル付き）"
+        scope: blog
+      multi_columns:
+        label: "マルチカラム"
+        scope: blog
+      pdf:
+        label: pdf
+        scope: blog
+      section:
+        label: "背景付きセクション"
+        scope: blog
+      table_responsive:
+        label: "レスポンシブ対応テーブル "
+        scope: blog
+    importer: block_editor_blocks
+  blog_static_files:
+    component: ~
+    data:
+      - assets
+    importer: blog_static_files
+  custom_fields:
+    component: commercial
+    data:
+      page_main_img:
+        default: ''
+        description: "ウェブページのヘッダー画像や、メインページのピックアップページの背景画像に使われる画像を設定します。画像サイズは幅1280px以上推奨です。"
+        name: "ページ内イメージ"
+        obj_type: page
+        options: ''
+        required: 0
+        type: asset_image
+    importer: custom_fields
+  entry_format_prefs:
+    component: ~
+    data:
+      page:
+        convert_breaks: use_previous
+        text_filters:
+          - 0
+          - __default__
+          - markdown
+          - richtext
+          - block_editor
+      post:
+        convert_breaks: use_previous
+        text_filters:
+          - 0
+          - __default__
+          - markdown
+          - richtext
+          - block_editor
+    importer: entry_format_prefs
+  field_display_options:
+    component: ~
+    data:
+      page:
+        excerpt:
+          display: default
+          order: 2
+        keywords:
+          display: default
+          order: 1
+        text:
+          display: default
+          order: 0
+      post:
+        excerpt:
+          display: default
+          order: 2
+        keywords:
+          display: default
+          order: 1
+        text:
+          display: default
+          order: 0
+    importer: field_display_options
+  template_set:
+    component: core
+    data:
+      base_path: templates
+      templates:
+        archive:
+          category_entry_listing:
+            filename: category_entry_listing.mtml
+            label: "カテゴリ一覧"
+            mappings:
+              category:
+                archive_type: Category
+                file_template: "%-c/%i"
+                preferred: 1
+        index:
+          archive_index_html:
+            filename: archive/index.html.mtml
+            label: "記事一覧"
+            outfile: archive/index.html
+            rebuild_me: 1
+          css_bootstrap_css:
+            filename: assets/css/bootstrap.css.mtml
+            label: bootstrap.css
+            outfile: assets/css/bootstrap.css
+            rebuild_me: 1
+          css_theme_css:
+            filename: assets/css/theme.css.mtml
+            label: theme.css
+            outfile: assets/css/theme.css
+            rebuild_me: 1
+          main_index:
+            filename: index.html.mtml
+            label: "メインページ"
+            outfile: index.html
+            rebuild_me: 1
+            settings: index_settings.mtml
+            vars:
+              theme_hero_pic: .assets/banner.png
+              theme_hero_text_main: "<p>Movable Type.net の<br>標準テーマ</p>"
+              theme_hero_text_sub: "<p>これは上記のメインタイトルに合わせた<br>サイズが小さいリードテキストです。</p>"
+              theme_placeholder: ''
+              theme_toppage_latest_entries_limit: 3
+              theme_toppage_selected_entries: 1
+              theme_toppage_selected_webpages: 1
+        individual:
+          entry:
+            filename: entry.mtml
+            label: "記事"
+            mappings:
+              individual:
+                archive_type: Individual
+                file_template: "%y/%m/%-b/%i"
+                preferred: 1
+        module:
+          breadcrumbs:
+            filename: breadcrumbs.mtml
+            label: "パンくずリスト"
+          config:
+            filename: config.mtml
+            label: "全般設定"
+            settings: config_settings.mtml
+          entry_item:
+            filename: entry_item.mtml
+            label: "記事アイテム"
+          entry_list:
+            filename: entry_list.mtml
+            label: "記事リスト"
+          footer:
+            filename: footer.mtml
+            label: "フッター"
+            settings: footer_settings.mtml
+            vars:
+              theme_copyright: "©2025&nbsp;ゆるやかな合同WEB勉強会.\n      \n      "
+              theme_footer_logo: .assets/logo.png
+              theme_sub_menu_items: ''
+          global_navi:
+            filename: global_navi.mtml
+            label: "グローバルナビゲーション"
+            settings: global_navi_settings.mtml
+            vars:
+              theme_CTA_button_text: "お問い合わせ        \n        "
+              theme_CTA_button_url: ''
+              theme_main_menu_items: ''
+              theme_nav_logo: .assets/logo.png
+          layout:
+            filename: layout.mtml
+            label: "レイアウト"
+          metainfo:
+            filename: metainfo.mtml
+            label: "メタ情報"
+          page_item:
+            filename: page_item.mtml
+            label: "ウェブページアイテム"
+        page:
+          page:
+            filename: page.mtml
+            label: "ウェブページ"
+            mappings:
+              page:
+                archive_type: Page
+                file_template: "%-c/%-b/%i"
+                preferred: 1
+        system:
+          editor_css:
+            filename: editor_css.mtml
+            label: "エディタCSS"
+    importer: template_set
+  thumbnail_image:
+    component: ~
+    data:
+      show_thumbnail_editor: 1
+    importer: thumbnail_image
+

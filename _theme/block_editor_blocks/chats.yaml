@@ -1,0 +1,95 @@
+addable_block_types: 
+  core-columns: 
+    order: 13
+    panel: 0
+    shortcut: 0
+  core-horizontalrule: 
+    order: 10
+    panel: 0
+    shortcut: 0
+  core-html: 
+    order: 8
+    panel: 0
+    shortcut: 0
+  core-table: 
+    order: 11
+    panel: 0
+    shortcut: 0
+  core-text: 
+    order: 0
+    panel: 0
+    shortcut: 0
+  custom-CTA: 
+    order: 7
+    panel: 0
+    shortcut: 0
+  custom-accordion: 
+    order: 17
+    panel: 0
+    shortcut: 0
+  custom-accordion_item: 
+    order: 16
+    panel: 0
+    shortcut: 0
+  custom-button: 
+    order: 6
+    panel: 0
+    shortcut: 0
+  custom-chat_item: 
+    order: 19
+    panel: 1
+    shortcut: 0
+  custom-code: 
+    order: 18
+    panel: 0
+    shortcut: 0
+  custom-file: 
+    order: 20
+    panel: 0
+    shortcut: 0
+  custom-image: 
+    order: 2
+    panel: 0
+    shortcut: 0
+  custom-link: 
+    order: 5
+    panel: 0
+    shortcut: 0
+  custom-multi_columns: 
+    order: 14
+    panel: 0
+    shortcut: 0
+  custom-pdf: 
+    order: 4
+    panel: 0
+    shortcut: 0
+  custom-section: 
+    order: 15
+    panel: 0
+    shortcut: 0
+  custom-table_responsive: 
+    order: 12
+    panel: 0
+    shortcut: 0
+  mt-file: 
+    order: 3
+    panel: 0
+    shortcut: 0
+  mt-image: 
+    order: 1
+    panel: 0
+    shortcut: 0
+  sixapart-oembed: 
+    order: 9
+    panel: 0
+    shortcut: 0
+can_remove_block: 1
+class_name: theme-block theme-block-chats
+html: "<!-- mt-beb t=\"core-context\" m='{\"1\":{\"label\":\"画像\",\"className\":\"img\"},\"2\":{\"assetId\":\"\",\"alignment\":\"\",\"width\":\"\"},\"3\":{\"label\":\"画像キャプション\",\"className\":\"figcaption\",\"blockElement\":\"p\"},\"4\":{\"text\":\"\"},\"5\":{\"label\":\"画像の配置\",\"className\":\"img-position\",\"blockElement\":\"p\",\"options\":\"左\\n右\"},\"6\":{\"text\":\"左\"},\"7\":{\"label\":\"メッセージ\",\"className\":\"message\"}}' --><!-- /mt-beb --><!-- mt-beb t=\"custom-chat_item\" h='&lt;!-- mt-beb t=\"mt-image\" m=&#x27;1,2&#x27; --&gt;&lt;p class=\"mt-be-image img\"&gt;&lt;img src=\"\" alt=\"\" width=\"\" height=\"\" class=\"asset asset-image\" style=\"max-width:100%;height:auto;display:block\"/&gt;&lt;/p&gt;&lt;!-- /mt-beb --&gt;&lt;!-- mt-beb t=\"sixapart-input\" m=&#x27;3,4&#x27; --&gt;&lt;p class=\"figcaption\"&gt;&lt;/p&gt;&lt;!-- /mt-beb --&gt;&lt;!-- mt-beb t=\"sixapart-select\" m=&#x27;5,6&#x27; --&gt;&lt;p class=\"img-position\"&gt;左&lt;/p&gt;&lt;!-- /mt-beb --&gt;&lt;!-- mt-beb m=&#x27;7&#x27; --&gt;&lt;p class=\"message\"&gt;チャット本文&lt;/p&gt;&lt;!-- /mt-beb --&gt;' -->\r\n  <div class=\"theme-block theme-block-chat-item \">\r\n\r\n    <div class=\"theme-block-chat-item-body theme-prose\">\r\n      チャット本文\r\n    </div>\r\n  </div>\r\n<!-- /mt-beb -->"
+icon: ''
+identifier: chats
+label: "チャット"
+preview_header: ''
+root_block: div
+scope: blog
+show_preview: 1

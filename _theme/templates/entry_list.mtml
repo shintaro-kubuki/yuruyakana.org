@@ -1,0 +1,60 @@
+<mt:Ignore>==================================================
+Set Variables
+==================================================</mt:Ignore>
+<mt:SetVarTemplate name="theme_entries_header_template">
+  <div class="theme-entries column-gap-5 border-top border-bottom">
+</mt:SetVarTemplate>
+
+<mt:SetVarTemplate name="theme_entries_footer_template">
+  </div>
+
+  <nav aria-label="ページネーション">
+    <ul class="pagination m-0 text-center">
+      <li class="page-item <mt:PaginationHasPrevious><mt:Else>disabled</mt:PaginationHasPrevious>">
+        <a class="page-link" href="<$mt:PaginationPreviousURL$>">前のページ</a>
+      </li>
+
+      <li class="page-item page-item-index">
+        <a class="page-link" href="<$mt:BlogRelativeURL$>archive/">一覧に戻る</a>
+      </li>
+
+      <li class="page-item <mt:PaginationHasNext><mt:Else>disabled</mt:PaginationHasNext>">
+        <a class="page-link" href="<$mt:PaginationNextURL$>">次のページ</a>
+      </li>
+    </ul>
+  </nav>
+</mt:SetVarTemplate>
+
+
+<mt:Ignore>==================================================
+Output
+==================================================</mt:Ignore>
+<mt:IncludeBlock module="レイアウト">
+  <$mt:Include module="全般設定"$>
+
+  <div class="container-lg">
+    <$mt:Include module="パンくずリスト"$>
+  </div>
+
+  <main class="py-5">
+    <div class="container-lg vstack row-gap-5">
+      <h1 class="mb-0"><mt:If name="category_archive"><$mt:CategoryLabel$><mt:Else><$mt:Var name="theme_archive_title" default="お知らせ"$></mt:If></h1>
+      
+      <mt:Entries paginate_by="10">
+        <mt:EntriesHeader>
+          <$mt:Var name="theme_entries_header_template"$>
+        </mt:EntriesHeader>
+
+        <$mt:Include module="記事アイテム"$>
+  
+        <mt:EntriesFooter>
+          <$mt:Var name="theme_entries_footer_template"$>
+        </mt:EntriesFooter>
+      </mt:Entries>
+    </div>
+  </main>
+
+  <div class="container-lg">
+    <$mt:Include module="パンくずリスト"$>
+  </div>
+</mt:IncludeBlock>

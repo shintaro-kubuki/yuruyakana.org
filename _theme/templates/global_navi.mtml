@@ -1,0 +1,97 @@
+<mt:Ignore>==================================================
+Config
+==================================================</mt:Ignore>
+<$mt:Include module="全般設定"$>
+
+
+<mt:Ignore>==================================================
+Set Variables
+==================================================</mt:Ignore>
+<$mt:BlogName encode_html="1" setvar="theme_name"$>
+
+
+<mt:Ignore>==================================================
+Output
+==================================================</mt:Ignore>
+<nav class="navbar navbar-expand-lg flex-lg-column gap-4 h-100" aria-label="グローバルナビゲーション">
+  <div class="MTSE-nav-logo">
+    <mt:Var
+      name="theme_nav_logo"
+      editor:label="ロゴ画像"
+      editor:type="image"
+      editor:update:attribute="src"
+      editor:update:selector=".MTSE-nav-logo img"
+      editor:if:value="<img>"
+      editor:if:empty="$theme_name"
+    >
+    <a class="navbar-brand text-wrap theme-logo" href="<$mt:BlogRelativeURL$>">
+      <!-- mt-site-editor-theme_nav_logo -->
+      <mt:If name="theme_nav_logo">
+        <img
+          src="<mt:Asset id="$theme_nav_logo"><$mt:AssetURL$></mt:Asset>"
+          alt="<$mt:Var name="theme_name"$>"
+          width="<mt:Asset id="$theme_nav_logo"><$mt:AssetProperty property="image_width"$></mt:Asset>"
+          height="<mt:Asset id="$theme_nav_logo"><$mt:AssetProperty property="image_height"$></mt:Asset>"
+          decoding="async"
+          fetchPriority="high"
+        >
+      <mt:Else>
+        <!-- mt-site-editor-theme_nav_logo-if-empty -->
+          <$mt:Var name="theme_name"$>
+        <!-- /mt-site-editor-theme_nav_logo-if-empty -->
+      </mt:If>
+      <!-- /mt-site-editor-theme_nav_logo -->
+    </a>
+  </div>
+  
+  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="メニューを開く">
+    <span class="navbar-toggler-icon"></span>
+    <span aria-hidden="true">メニュー</span>
+  </button>
+
+  <div class="offcanvas-lg offcanvas-end w-lg-100 flex-grow-1 overflow-hidden" id="offcanvasNavbar" tabindex="-1">
+    <div class="offcanvas-body flex-column h-100">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="true" aria-label="メニューを閉じる">
+        <span class="btn-close"></span>
+        <span aria-hidden="true">閉じる</span>
+      </button>
+
+      <ul class="list-unstyled overflow-y-auto m-0 MTSE-main-menu">
+        <li><a class="nav-link" href="<$mt:BlogRelativeURL$>"><$mt:Var name="theme_toppage_title" default="トップページ"$></a></li>
+        <li><a class="nav-link" href="<$mt:BlogRelativeURL$>archive/"><$mt:Var name="theme_archive_title" default="お知らせ"$></a></li>
+
+        <mt:If name="theme_main_menu_items">
+          <mt:Pages ids="$theme_main_menu_items">
+            <li class="MTSE-main-menu-item"><a class="nav-link MTSE-main-menu-item__title MTSE-main-menu-item__url" href="<$mt:PagePermalink$>"><$mt:PageTitle encode_html="1"$></a></li>
+          </mt:Pages>
+        </mt:If>
+      </ul>
+      <mt:Var
+        name="theme_main_menu_items"
+        editor:label="グローバルナビゲーションに表示するウェブページ"
+        editor:type="list"
+        editor:mode="editor"
+        editor:update:selector=".MTSE-main-menu-item"
+        editor:update:html="$theme_main_menu_item_template"
+        editor:update:parent:selector=".MTSE-main-menu"
+      >
+
+      <div class="px-lg-4 mt-4 mt-lg-auto w-lg-100">
+        <a
+          class="btn btn-primary btn-sm fw-bold mb-1 px-3 py-2 w-100 theme-CTA"
+          href="<$mt:Var name="theme_CTA_button_url" editor:label="URL" editor:mode="attribute" editor:type="text" editor:update:selector=".theme-CTA" editor:update:fetch="1" default="/contact/"$>"
+        >
+          <mt:Var 
+            name="theme_CTA_button_text"
+            editor:label="テキスト"
+            editor:mode="text"
+            editor:type="contenteditable"
+            editor:button:mode="before"
+            default="お問い合わせ"
+            editor:button:position="-5,-20"
+          >
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

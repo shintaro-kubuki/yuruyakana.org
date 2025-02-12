@@ -1,0 +1,76 @@
+<mt:Ignore>==================================================
+Config
+==================================================</mt:Ignore>
+<$mt:Include module="全般設定"$>
+
+
+<mt:Ignore>==================================================
+Set Variables
+==================================================</mt:Ignore>
+<$mt:ArchiveType setvar="theme_current_archive_type"$>
+
+<mt:SetVarTemplate name="theme_breadcrumb_item_template">
+  <li class="breadcrumb-item flex-shrink-0">
+    <a href="<$mt:BlogRelativeURL$><$mt:Var name="theme_breadcrumb_item_path"$>">
+      <$mt:Var name="theme_breadcrumb_item_label" encode_html="1"$>
+    </a>
+  </li>
+</mt:SetVarTemplate>
+
+<mt:SetVarTemplate name="theme_breadcrumb_item_active_template">
+  <li class="breadcrumb-item flex-shrink-0 active visually-hidden" aria-current="page">
+    <$mt:Var name="theme_breadcrumb_item_label" encode_html="1"$>
+  </li>
+</mt:SetVarTemplate>
+
+<$mt:Var name="is_theme_shows_breadcrumb" value="0"$>
+<mt:If name="theme_current_archive_type" eq="Page">
+  <mt:If tag="PageFolder">
+    <$mt:Var name="is_theme_shows_breadcrumb" value="1"$>
+  </mt:If>
+<mt:ElseIf name="theme_current_archive_type" eq="Individual">
+  <$mt:Var name="is_theme_shows_breadcrumb" value="1"$>
+<mt:ElseIf name="theme_current_archive_type" eq="Category">
+  <$mt:Var name="is_theme_shows_breadcrumb" value="1"$>
+</mt:If>
+
+
+<mt:Ignore>==================================================
+Output
+==================================================</mt:Ignore>
+<mt:If name="is_theme_shows_breadcrumb" eq="1">
+  <nav aria-label="パンくずリスト">
+    <ol class="breadcrumb flex-nowrap overflow-x-auto">
+      <$mt:Var name="theme_breadcrumb_item_path" value=""$>
+      <$mt:Var name="theme_toppage_title" default="トップページ" setvar="theme_breadcrumb_item_label"$>
+      <$mt:Var name="theme_breadcrumb_item_template"$>
+
+      <mt:If name="theme_current_archive_type" eq="Page">
+        <mt:ParentFolders>
+          <$mt:FolderPath setvar="theme_breadcrumb_item_path"$>
+          <$mt:FolderLabel setvar="theme_breadcrumb_item_label"$>
+          <$mt:Var name="theme_breadcrumb_item_template"$>
+        </mt:ParentFolders>
+
+        <$mt:PageTitle setvar="theme_breadcrumb_item_label"$>
+        <$mt:Var name="theme_breadcrumb_item_active_template"$>
+      <mt:Else>
+        <$mt:Var name="theme_breadcrumb_item_path" value="archive/"$>
+        <$mt:Var name="theme_archive_title" default="お知らせ" setvar="theme_breadcrumb_item_label"$>
+        <$mt:Var name="theme_breadcrumb_item_template"$>
+
+        <mt:If name="theme_current_archive_type" eq="Individual">
+          <$mt:EntryTitle setvar="theme_breadcrumb_item_label"$>
+        <mt:ElseIf name="theme_current_archive_type" eq="Category">
+          <$mt:CategoryLabel setvar="theme_breadcrumb_item_label"$>
+        <mt:Else>
+          <$mt:ArchiveTypeLabel setvar="theme_breadcrumb_item_label"$>
+        </mt:If>
+
+        <mt:If name="theme_breadcrumb_item_label">
+          <$mt:Var name="theme_breadcrumb_item_active_template"$>
+        </mt:If>
+      </mt:If>
+    </ol>
+  </nav>
+</mt:If>

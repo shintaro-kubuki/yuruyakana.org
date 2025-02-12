@@ -1,0 +1,12 @@
+addable_block_types: {}
+
+can_remove_block: 0
+class_name: ''
+html: "<!-- mt-beb t=\"core-context\" m='{\"1\":{\"label\":\"ファイル名\",\"className\":\"filename\",\"blockElement\":\"p\"},\"2\":{\"text\":\"\"},\"3\":{\"label\":\"ソースコード\",\"className\":\"code\",\"blockElement\":\"pre\",\"formatter\":\"none\"}}' --><!-- /mt-beb --><!-- mt-beb t=\"sixapart-input\" m='1,2' --><p class=\"filename\"></p><!-- /mt-beb --><!-- mt-beb t=\"sixapart-textarea\" m='3,2' --><pre class=\"code\"></pre><!-- /mt-beb -->"
+icon: ''
+identifier: code
+label: "コード"
+preview_header: "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.1.0/mustache.min.js\" integrity=\"sha512-HYiNpwSxYuji84SQbCU5m9kHEsRqwWypXgJMBtbRSumlx1iBB6QaxgEBZHSHEGM+fKyCX/3Kb5V5jeVXm0OglQ==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\"></script>\r\n<script>\r\ndocument.addEventListener('DOMContentLoaded', async () => {\r\n  if ( document.body.dataset.hasCompiledHtml ) return\r\n\r\n  const data = {\r\n    code: document.querySelector('.code').innerHTML,\r\n    filename: document.querySelector('.filename').innerHTML\r\n  }\r\n  const template = document.querySelector('#template').innerHTML\r\n  const rendered = Mustache.render(template, data)\r\n  MTBlockEditorSetCompiledHtml(rendered)  \r\n})\r\n</script>\r\n\r\n<template id=\"template\">\r\n  <div class=\"theme-block-file\">\r\n    <p class=\"theme-block-file-decoration\" aria-hidden=\"true\">\r\n      <span class=\"theme-block-file-decoration-icon material-symbols-outlined\"></span>\r\n      <span class=\"theme-block-file-decoration-label\">{{filename}}</span>\r\n    </p>\r\n    <pre><code>{{{code}}}</code></pre>\r\n  </div>\r\n</template>"
+root_block: ''
+scope: blog
+show_preview: 1

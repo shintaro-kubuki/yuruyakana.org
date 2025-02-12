@@ -1,0 +1,34 @@
+<mt:Ignore>==================================================
+Output
+==================================================</mt:Ignore>
+<mt:IncludeBlock module="レイアウト">
+  <div class="container-lg">
+    <$mt:Include module="パンくずリスト"$>
+  </div>
+
+  <main class="py-5 page-<$mt:PageID$>">
+    <div class="container-lg">
+      <header class="vstack row-gap-4 pb-5 border-bottom">
+        <h1 class="mb-0"><$mt:PageTitle encode_html="1"$></h1>
+      </header>
+    </div>
+
+    <mt:If tag="CustomFieldValue" identifier="page_main_img">
+  	  <mt:CustomFieldAsset identifier="page_main_img">
+        <picture class="theme-webpage-hero">
+          <img class="d-block mx-auto" src="<$mt:AssetURL$>" alt="" width="1440" height="560" loading="lazy">
+        </picture>
+  	  </mt:CustomFieldAsset>
+    </mt:If>
+  
+    <div class="container mt-5">
+      <div class="theme-blocks theme-prose">
+        <$mt:PageBody$>
+      </div>
+    </div>
+  </main>
+
+  <div class="container-lg">
+    <$mt:Include module="パンくずリスト"$>
+  </div>
+</mt:IncludeBlock>

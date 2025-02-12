@@ -1,0 +1,71 @@
+addable_block_types: 
+  core-columns: 
+    order: 11
+    panel: 0
+    shortcut: 0
+  core-horizontalrule: 
+    order: 8
+    panel: 1
+    shortcut: 0
+  core-html: 
+    order: 6
+    panel: 1
+    shortcut: 0
+  core-table: 
+    order: 9
+    panel: 0
+    shortcut: 0
+  core-text: 
+    order: 0
+    panel: 0
+    shortcut: 0
+  custom-CTA: 
+    order: 13
+    panel: 1
+    shortcut: 0
+  custom-button: 
+    order: 12
+    panel: 1
+    shortcut: 0
+  custom-heading: 
+    order: 2
+    panel: 1
+    shortcut: 0
+  custom-image: 
+    order: 4
+    panel: 1
+    shortcut: 1
+  custom-section: 
+    order: 14
+    panel: 1
+    shortcut: 0
+  custom-table_responsive: 
+    order: 10
+    panel: 1
+    shortcut: 0
+  custom-text: 
+    order: 1
+    panel: 1
+    shortcut: 1
+  mt-file: 
+    order: 5
+    panel: 1
+    shortcut: 1
+  mt-image: 
+    order: 3
+    panel: 0
+    shortcut: 0
+  sixapart-oembed: 
+    order: 7
+    panel: 1
+    shortcut: 0
+can_remove_block: 0
+class_name: ''
+html: "<!-- mt-beb t=\"core-context\" m='{\"1\":{\"label\":\"ラベル\",\"className\":\"accordion-item-button\",\"blockElement\":\"p\"},\"2\":{\"text\":\"\"},\"3\":{\"label\":\"詳細\",\"className\":\"accordion-item-body\"}}' --><!-- /mt-beb --><!-- mt-beb t=\"sixapart-input\" m='1,2' --><p class=\"accordion-item-button\"></p><!-- /mt-beb --><!-- mt-beb m='3' --><!-- /mt-beb -->"
+icon: ''
+identifier: accordion_item
+label: "アコーディオンアイテム"
+preview_header: "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.1.0/mustache.min.js\" integrity=\"sha512-HYiNpwSxYuji84SQbCU5m9kHEsRqwWypXgJMBtbRSumlx1iBB6QaxgEBZHSHEGM+fKyCX/3Kb5V5jeVXm0OglQ==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\"></script>\r\n<script>\r\ndocument.addEventListener('DOMContentLoaded', async () => {\r\n  if ( document.body.dataset.hasCompiledHtml ) return\r\n\r\n  const data = {\r\n    button: document.querySelector('.accordion-item-button')?.textContent || '',\r\n    body: document.querySelector('.accordion-item-body')?.innerHTML || '',\r\n  }\r\n  const template = document.querySelector('#template').innerHTML\r\n  const rendered = Mustache.render(template, data)\r\n  MTBlockEditorSetCompiledHtml(rendered)\r\n});\r\n</script>\r\n\r\n<template id=\"template\">\r\n  <details class=\"accordion-item\">\r\n    <summary class=\"accordion-header\">\r\n      <span class=\"accordion-button\">{{button}}</span>\r\n    </summary>\r\n\r\n    <div class=\"accordion-collapse\">\r\n      <div class=\"accordion-body\">\r\n        {{{body}}}\r\n      </div>\r\n    </div>\r\n  </details>\r\n</template>"
+root_block: ''
+scope: blog
+show_preview: 1

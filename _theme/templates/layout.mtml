@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <$mt:Include module="メタ情報"$>
+</head>
+<body class="<mt:If name="is_site_editor">MTSE</mt:If>">
+<div class="theme-wrapper">
+  <div class="theme-nav bg-white">
+    <a class="theme-skippy visually-hidden-focusable p-2 bg-white z-1" href="#content">メインコンテンツへスキップ</a>
+    <$mt:Include module="グローバルナビゲーション"$>
+  </div>
+  
+  <div class="theme-content overflow-hidden bg-white">
+    <div id="content">
+      <$mt:Var name="contents"$>
+    </div>
+  </div>
+
+  <div class="theme-footer bg-white">
+    <$mt:Include module="フッター"$>
+  </div>
+</div>
+</body>
+</html>

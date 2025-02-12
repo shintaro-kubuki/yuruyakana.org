@@ -1,0 +1,63 @@
+addable_block_types: 
+  core-columns: 
+    order: 8
+    panel: 1
+    shortcut: 0
+  core-horizontalrule: 
+    order: 5
+    panel: 1
+    shortcut: 0
+  core-html: 
+    order: 3
+    panel: 1
+    shortcut: 0
+  core-table: 
+    order: 6
+    panel: 1
+    shortcut: 0
+  core-text: 
+    order: 0
+    panel: 1
+    shortcut: 1
+  custom-left_image: 
+    order: 12
+    panel: 1
+    shortcut: 0
+  custom-right_image: 
+    order: 11
+    panel: 1
+    shortcut: 0
+  custom-table: 
+    order: 7
+    panel: 1
+    shortcut: 0
+  custom-three_column: 
+    order: 10
+    panel: 1
+    shortcut: 0
+  custom-two_column: 
+    order: 9
+    panel: 1
+    shortcut: 0
+  mt-file: 
+    order: 2
+    panel: 1
+    shortcut: 1
+  mt-image: 
+    order: 1
+    panel: 1
+    shortcut: 1
+  sixapart-oembed: 
+    order: 4
+    panel: 1
+    shortcut: 0
+can_remove_block: 0
+class_name: theme-block theme-block-pdf
+html: <!-- mt-beb t="core-context" m='{"1":{"assetId":""}}' --><!-- /mt-beb --><!-- mt-beb t="mt-file" m='1' --><div class="mt-be-file"><a href=""></a></div><!-- /mt-beb -->
+icon: data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NTAuODAxIiBoZWlnaHQ9IjU1MC44MDEiIHZpZXdCb3g9IjAgMCA1NTAuODAxIDU1MC44MDEiPjxwYXRoIGQ9Ik0xNjAuMzgxIDI4Mi4yMjVjMC0xNC44MzItMTAuMjk5LTIzLjY4NC0yOC40NzQtMjMuNjg0LTcuNDE0IDAtMTIuNDM3LjcxNS0xNS4wNzEgMS40MzJWMzA3LjZjMy4xMTQuNzA3IDYuOTQyLjk0OSAxMi4xOTIuOTQ5IDE5LjM5MSAwIDMxLjM1My05LjgwOSAzMS4zNTMtMjYuMzI0ek0yNzIuODc1IDI1OS4wMTljLTguMTQ1IDAtMTMuMzk3LjcxNy0xNi41MTkgMS40MzV2MTA1LjUyM2MzLjExNi43MjkgOC4xNDIuNzI5IDEyLjY5LjcyOSAzMy4wMTcuMjMxIDU0LjU1NC0xNy45NDYgNTQuNTU0LTU2LjQ3NC4yNDItMzMuNTEzLTE5LjM4NS01MS4yMTMtNTAuNzI1LTUxLjIxM3oiLz48cGF0aCBkPSJNNDg4LjQyNiAxOTcuMDE5SDQ3NS4ydi02My44MTZjMC0uMzk4LS4wNjMtLjc5OS0uMTE2LTEuMjAyLS4wMjEtMi41MzQtLjgyNy01LjAyMy0yLjU2Mi02Ljk5NUwzNjYuMzI1IDMuNjk0Yy0uMDMyLS4wMzEtLjA2My0uMDQyLS4wODUtLjA3Ni0uNjMzLS43MDctMS4zNzEtMS4yOTUtMi4xNTEtMS44MDRhOS40OTUgOS40OTUgMCAwIDAtLjcwNi0uNDE5IDExLjEzMSAxMS4xMzEgMCAwIDAtMi4xMzEtLjg5NmMtLjItLjA1Ni0uMzgtLjEzOC0uNTgtLjE5QTEwLjc3NCAxMC43NzQgMCAwIDAgMzU4LjE5MyAwSDk3LjJDODUuMjgyIDAgNzUuNiA5LjY5MyA3NS42IDIxLjYwMXYxNzUuNDEzSDYyLjM3N2MtMTcuMDQ5IDAtMzAuODczIDEzLjgxOC0zMC44NzMgMzAuODczdjE2MC41NDVjMCAxNy4wNDMgMTMuODI0IDMwLjg3IDMwLjg3MyAzMC44N2gxMy4yMjRWNTI5LjJjMCAxMS45MDcgOS42ODIgMjEuNjAxIDIxLjYgMjEuNjAxaDM1Ni40YzExLjkwNyAwIDIxLjYtOS42OTMgMjEuNi0yMS42MDFWNDE5LjMwMmgxMy4yMjZjMTcuMDQ0IDAgMzAuODcxLTEzLjgyNyAzMC44NzEtMzAuODd2LTE2MC41NGMtLjAwMS0xNy4wNTQtMTMuODI4LTMwLjg3My0zMC44NzItMzAuODczek05Ny4yIDIxLjYwNWgyNTAuMTkzdjExMC41MTNjMCA1Ljk2NyA0Ljg0MSAxMC44IDEwLjggMTAuOEg0NTMuNnY1NC4xMDhIOTcuMlYyMS42MDV6bTI2NS4xNTkgMjg3LjQxOGMwIDMwLjg3Ni0xMS4yNDMgNTIuMTY1LTI2LjgyIDY1LjMzMy0xNi45NzEgMTQuMTE3LTQyLjgyIDIwLjgxNC03NC4zOTYgMjAuODE0LTE4LjkgMC0zMi4yOTctMS4xOTctNDEuNDAxLTIuMzg5VjIzNC4zNjVjMTMuMzk5LTIuMTQ5IDMwLjg3OC0zLjM0NiA0OS4zMDQtMy4zNDYgMzAuNjEyIDAgNTAuNDc4IDUuNTA4IDY2LjAzOSAxNy4yMjYgMTYuNzQzIDEyLjQ0NSAyNy4yNzQgMzIuMzAyIDI3LjI3NCA2MC43Nzh6TTgwLjcgMzkzLjQ5OVYyMzQuMzY1YzExLjI0MS0xLjkwNCAyNy4wNDItMy4zNDYgNDkuMjk2LTMuMzQ2IDIyLjQ5MSAwIDM4LjUyNyA0LjMwOCA0OS4yOTEgMTIuOTI4IDEwLjI5MiA4LjEzMSAxNy4yMTUgMjEuNTM0IDE3LjIxNSAzNy4zMjggMCAxNS43OTktNS4yNSAyOS4xOTgtMTQuODI5IDM4LjI4NS0xMi40NDIgMTEuNzI4LTMwLjg2NSAxNi45OTYtNTIuNDA3IDE2Ljk5Ni00Ljc3OCAwLTkuMS0uMjQzLTEyLjQzNS0uNzIzdjU3LjY3SDgwLjd2LS4wMDR6bTM3Mi45MDEgMTI5Ljg1NEg5Ny4yVjQxOS4zMDJoMzU2LjR2MTA0LjA1MXptMzEuMjk3LTI2MS4yMjZoLTYxLjk4OXYzNi44NTFoNTcuOTEzdjI5LjY3NGgtNTcuOTEzVjM5My41aC0zNi41OTNWMjMyLjIxNmg5OC41ODJ2MjkuOTExeiIvPjwvc3ZnPg==
+identifier: pdf
+label: pdf
+preview_header: "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.1.0/mustache.min.js\" integrity=\"sha512-HYiNpwSxYuji84SQbCU5m9kHEsRqwWypXgJMBtbRSumlx1iBB6QaxgEBZHSHEGM+fKyCX/3Kb5V5jeVXm0OglQ==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\"></script>\r\n<script>\r\ndocument.addEventListener('DOMContentLoaded', async () => {\r\n  if ( document.body.dataset.hasCompiledHtml ) return\r\n  \r\n  const size = 400\r\n  const $anchor = document.querySelector('a')\r\n  const $img = new Image()\r\n\r\n  $img.src = $anchor.href.replace(/([^\\/]+)\\.pdf($|\\?)/, (_, basename, trailing) => `thumbnail/${basename}-${size}x${size}f.pdf${trailing}`)\r\n  $img.addEventListener('load', () => {\r\n    const data = {\r\n      link:{\r\n        href: $anchor.href,\r\n        text: $anchor.textContent,\r\n        target: $anchor.target || '_self',\r\n      },\r\n      img: {\r\n        src: $img.src,\r\n        alt: '',\r\n        width: $img.naturalWidth,\r\n        height: $img.naturalHeight,\r\n      },\r\n    }\r\n  \r\n    const template = document.querySelector('#template').innerHTML\r\n    const rendered = Mustache.render(template, data)\r\n    MTBlockEditorSetCompiledHtml(rendered)\r\n  });\r\n});\r\n</script>\r\n\r\n<template id=\"template\">\r\n  <p class=\"theme-block-file\">\r\n    <span class=\"theme-block-file-decoration\" aria-hidden=\"true\">\r\n      <span class=\"theme-block-file-decoration-icon material-symbols-outlined\"></span>\r\n      <span class=\"theme-block-file-decoration-label\"></span>\r\n    </span>\r\n    <a href=\"{{link.href}}\"  target=\"{{link.target}}\">\r\n      <img\r\n        src=\"{{img.src}}\"\r\n        alt=\"\"\r\n        width=\"{{img.width}}\"\r\n        height=\"{{img.height}}\"\r\n        loading=\"lazy\"\r\n      >\r\n      <span class=\"\">{{link.text}}</span>\r\n    </a>\r\n  </p>\r\n</template>"
+root_block: ''
+scope: blog
+show_preview: 1

@@ -1,0 +1,95 @@
+addable_block_types: 
+  core-columns: 
+    order: 9
+    panel: 0
+    shortcut: 0
+  core-horizontalrule: 
+    order: 6
+    panel: 0
+    shortcut: 0
+  core-html: 
+    order: 4
+    panel: 0
+    shortcut: 0
+  core-table: 
+    order: 7
+    panel: 0
+    shortcut: 0
+  core-text: 
+    order: 0
+    panel: 0
+    shortcut: 0
+  custom-CTA: 
+    order: 11
+    panel: 0
+    shortcut: 0
+  custom-accordion_item: 
+    order: 14
+    panel: 1
+    shortcut: 0
+  custom-button: 
+    order: 10
+    panel: 0
+    shortcut: 0
+  custom-chat_item: 
+    order: 15
+    panel: 0
+    shortcut: 0
+  custom-chats: 
+    order: 19
+    panel: 0
+    shortcut: 0
+  custom-code: 
+    order: 17
+    panel: 0
+    shortcut: 0
+  custom-file: 
+    order: 20
+    panel: 0
+    shortcut: 0
+  custom-image: 
+    order: 2
+    panel: 0
+    shortcut: 0
+  custom-link: 
+    order: 18
+    panel: 0
+    shortcut: 0
+  custom-multi_columns: 
+    order: 13
+    panel: 0
+    shortcut: 0
+  custom-pdf: 
+    order: 16
+    panel: 0
+    shortcut: 0
+  custom-section: 
+    order: 12
+    panel: 0
+    shortcut: 0
+  custom-table_responsive: 
+    order: 8
+    panel: 0
+    shortcut: 0
+  mt-file: 
+    order: 3
+    panel: 0
+    shortcut: 0
+  mt-image: 
+    order: 1
+    panel: 0
+    shortcut: 0
+  sixapart-oembed: 
+    order: 5
+    panel: 0
+    shortcut: 0
+can_remove_block: 1
+class_name: accordion
+html: ''
+icon: ''
+identifier: accordion
+label: "アコーディオン"
+preview_header: ''
+root_block: div
+scope: blog
+show_preview: 1

@@ -1,0 +1,59 @@
+addable_block_types: 
+  core-columns: 
+    order: 7
+    panel: 1
+    shortcut: 0
+  core-horizontalrule: 
+    order: 5
+    panel: 1
+    shortcut: 0
+  core-html: 
+    order: 3
+    panel: 1
+    shortcut: 0
+  core-table: 
+    order: 6
+    panel: 1
+    shortcut: 0
+  core-text: 
+    order: 0
+    panel: 1
+    shortcut: 1
+  custom-CTA: 
+    order: 9
+    panel: 1
+    shortcut: 0
+  custom-button: 
+    order: 8
+    panel: 1
+    shortcut: 0
+  custom-heading: 
+    order: 11
+    panel: 1
+    shortcut: 0
+  custom-section: 
+    order: 10
+    panel: 1
+    shortcut: 0
+  mt-file: 
+    order: 2
+    panel: 1
+    shortcut: 1
+  mt-image: 
+    order: 1
+    panel: 1
+    shortcut: 1
+  sixapart-oembed: 
+    order: 4
+    panel: 1
+    shortcut: 0
+can_remove_block: 0
+class_name: ''
+html: "<!-- mt-beb t=\"core-context\" m='{\"1\":{\"label\":\"画像\"},\"2\":{\"assetId\":\"\",\"alignment\":\"\",\"width\":\"\"}}' --><!-- /mt-beb --><!-- mt-beb t=\"mt-image\" m='1,2' --><p class=\"mt-be-image\"><img src=\"\" alt=\"\" width=\"\" height=\"\" class=\"asset asset-image\" style=\"max-width:100%;height:auto;display:block\"/></p><!-- /mt-beb -->"
+icon: data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA1MTIgNTEyJz48c3R5bGU+LnN0MHtmaWxsOiM2NjZ9PC9zdHlsZT48cGF0aCBjbGFzcz0nc3QwJyBkPSdNNDY0IDQ0OEg0OGMtMjYuNSAwLTQ4LTIxLjUtNDgtNDhWMTEyYzAtMjYuNSAyMS41LTQ4IDQ4LTQ4aDQxNmMyNi41IDAgNDggMjEuNSA0OCA0OHYyODhjMCAyNi41LTIxLjUgNDgtNDggNDh6TTExMiAxMjBjLTMwLjkgMC01NiAyNS4xLTU2IDU2czI1LjEgNTYgNTYgNTYgNTYtMjUuMSA1Ni01Ni0yNS4xLTU2LTU2LTU2ek02NCAzODRoMzg0VjI3MmwtODcuNS04Ny41Yy00LjctNC43LTEyLjMtNC43LTE3IDBMMjA4IDMyMGwtNTUuNS01NS41Yy00LjctNC43LTEyLjMtNC43LTE3IDBMNjQgMzM2djQ4eicvPjwvc3ZnPg==
+identifier: image
+label: "画像"
+preview_header: "<script>\r\ndocument.addEventListener('DOMContentLoaded', async () => {\r\n  if ( document.body.dataset.hasCompiledHtml ) return;\r\n\r\n  document.querySelector('figcaption')?.classList.add('fig-caption');\r\n  \r\n  MTBlockEditorSetCompiledHtml(document.body.innerHTML);\r\n});\r\n</script>\r\n"
+root_block: ''
+scope: blog
+show_preview: 1

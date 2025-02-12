@@ -1,0 +1,12 @@
+addable_block_types: {}
+
+can_remove_block: 0
+class_name: link
+html: "<!-- mt-beb t=\"core-context\" m='{\"1\":{\"label\":\"リンク（スタイル付き）\",\"helpText\":\"[リンクの挿入・編集]からリンク先を書き換えてください。\",\"className\":\"item\"},\"2\":{\"label\":\"リンクターゲット\",\"className\":\"target\",\"blockElement\":\"p\",\"options\":\"同じタブで開く\\n新しいタブで開く\"},\"3\":{\"text\":\"同じタブで開く\"}}' --><!-- /mt-beb --><!-- mt-beb m='1' --><p class=\"item\"><a title=\"リンクテキスト\" href=\"ここにURL\" target=\"_blank\" rel=\"noopener\">ここにURL</a></p><!-- /mt-beb --><!-- mt-beb t=\"sixapart-select\" m='2,3' --><p class=\"target\">同じタブで開く</p><!-- /mt-beb -->"
+icon: ''
+identifier: link
+label: "リンク（スタイル付き）"
+preview_header: "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.1.0/mustache.min.js\" integrity=\"sha512-HYiNpwSxYuji84SQbCU5m9kHEsRqwWypXgJMBtbRSumlx1iBB6QaxgEBZHSHEGM+fKyCX/3Kb5V5jeVXm0OglQ==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\"></script>\r\n<script>\r\ndocument.addEventListener('DOMContentLoaded', async () => {\r\n  if ( document.body.dataset.hasCompiledHtml ) return\r\n\r\n  const data = {\r\n    anchor: document.querySelector('.item a'),\r\n    target: document.querySelector('.target').textContent == '新しいタブで開く' ? '_blank' : '_self',\r\n  }\r\n  const template = document.querySelector('#template').innerHTML\r\n  const rendered = Mustache.render(template, data)\r\n  MTBlockEditorSetCompiledHtml(rendered)  \r\n})\r\n</script>\r\n\r\n<template id=\"template\">\r\n  <div class=\"theme-block-file\">\r\n    <p class=\"theme-block-file-decoration\" aria-hidden=\"true\">\r\n      <span class=\"theme-block-file-decoration-icon material-symbols-outlined\"></span>\r\n      <span class=\"theme-block-file-decoration-label\"></span>\r\n    </p>\r\n    <a href=\"{{anchor.href}}\" target=\"{{target}}\">{{anchor.textContent}}</a>\r\n  </div>\r\n</template>"
+root_block: ''
+scope: blog
+show_preview: 1

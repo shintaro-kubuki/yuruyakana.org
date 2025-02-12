@@ -1,0 +1,71 @@
+addable_block_types: 
+  core-columns: 
+    order: 11
+    panel: 0
+    shortcut: 0
+  core-horizontalrule: 
+    order: 8
+    panel: 1
+    shortcut: 0
+  core-html: 
+    order: 6
+    panel: 1
+    shortcut: 0
+  core-table: 
+    order: 9
+    panel: 0
+    shortcut: 0
+  core-text: 
+    order: 0
+    panel: 0
+    shortcut: 0
+  custom-CTA: 
+    order: 13
+    panel: 1
+    shortcut: 0
+  custom-button: 
+    order: 12
+    panel: 1
+    shortcut: 0
+  custom-heading: 
+    order: 2
+    panel: 1
+    shortcut: 0
+  custom-image: 
+    order: 4
+    panel: 1
+    shortcut: 1
+  custom-section: 
+    order: 14
+    panel: 1
+    shortcut: 0
+  custom-table_responsive: 
+    order: 10
+    panel: 1
+    shortcut: 0
+  custom-text: 
+    order: 1
+    panel: 1
+    shortcut: 1
+  mt-file: 
+    order: 5
+    panel: 1
+    shortcut: 1
+  mt-image: 
+    order: 3
+    panel: 0
+    shortcut: 0
+  sixapart-oembed: 
+    order: 7
+    panel: 1
+    shortcut: 0
+can_remove_block: 1
+class_name: ''
+html: "<!-- mt-beb t=\"core-context\" m='{\"1\":{\"className\":\"theme-block theme-block-columns\"}}' --><!-- /mt-beb --><!-- mt-beb t=\"core-columns\" m='1' --><div class=\"mt-be-columns theme-block theme-block-columns\" style=\"display: flex\"><!-- mt-beb t=\"core-column\" --><div class='mt-be-column'></div><!-- /mt-beb --><!-- mt-beb t=\"core-column\" --><div class='mt-be-column'></div><!-- /mt-beb --></div><!-- /mt-beb -->"
+icon: data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA1MTIgNTEyJz48c3R5bGU+LnN0MHtmaWxsOiM2NjZ9PC9zdHlsZT48cGF0aCBjbGFzcz0nc3QwJyBkPSdNNDY0IDMySDQ4QzIxLjUgMzIgMCA1My41IDAgODB2MzUyYzAgMjYuNSAyMS41IDQ4IDQ4IDQ4aDQxNmMyNi41IDAgNDgtMjEuNSA0OC00OFY4MGMwLTI2LjUtMjEuNS00OC00OC00OHpNMjI0IDQxNkg2NFYxNjBoMTYwdjI1NnptMjI0IDBIMjg4VjE2MGgxNjB2MjU2eicvPjwvc3ZnPg==
+identifier: multi_columns
+label: "マルチカラム"
+preview_header: "<script>\r\ndocument.addEventListener('DOMContentLoaded', async () => {\r\n  if ( document.body.dataset.hasCompiledHtml ) return;\r\n\r\n  document.querySelector('.mt-be-columns')?.removeAttribute('style')\r\n  document.querySelectorAll('.mt-be-column')?.forEach(item => {\r\n    item.classList.add('theme-prose')\r\n  })\r\n\r\n  MTBlockEditorSetCompiledHtml(document.body.innerHTML);\r\n});\r\n</script>"
+root_block: ''
+scope: blog
+show_preview: 1

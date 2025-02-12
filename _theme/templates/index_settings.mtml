@@ -1,0 +1,96 @@
+<mt:SetVarBlock name="theme_hero_pic_template">
+  <img
+    class="d-block mx-auto"
+    src="<mt:Asset id="$theme_hero_pic"><$mt:AssetURL$></mt:Asset>"
+    alt=""
+    width="<mt:Asset id="$theme_hero_pic"><$mt:AssetProperty property="image_width"$></mt:Asset>"
+    height="<mt:Asset id="$theme_hero_pic"><$mt:AssetProperty property="image_height"$></mt:Asset>"
+    decoding="async"
+    fetchpriority="high"
+  >
+</mt:SetVarBlock>
+
+<mt:SetVarBlock name="theme_hero_pic_empty_template">
+  <h2>メイン画像</h2>
+  <p>かんたんデザイン編集で、メイン画像を設定することができます。</p>
+</mt:SetVarBlock>
+
+<mt:SetVarTemplate name="theme_entry_item_template">
+  <$mt:Include module="記事アイテム" title_tag="h3"$>
+</mt:SetVarTemplate>
+
+<mt:SetVarTemplate name="theme_webpage_item_template">
+  <$mt:Include module="ウェブページアイテム" title_tag="h3"$>
+</mt:SetVarTemplate>
+
+<mt:Var
+  name="theme_hero_pic"
+  editor:label="メイン画像"
+  editor:type="image"
+  editor:update:attribute="src"
+  editor:update:selector=".MTSE-hero-pic img"
+  editor:if:value="$theme_hero_pic_template"
+  editor:if:empty="$theme_hero_pic_empty_template"
+  editor:register="0"
+>
+<mt:Var
+  name="theme_hero_text_main"
+  editor:label="メインキャッチコピー"
+  editor:type="textarea"
+  editor:editor="richtext"
+  editor:mode="editor"
+  default="<p>Movable Type.net の<br>標準テーマ</p>"
+  editor:update:required="1"
+  editor:register="0"
+>
+<mt:Var
+  name="theme_hero_text_sub"
+  editor:label="キャッチコピー概要"
+  editor:type="textarea"
+  editor:editor="richtext"
+  editor:mode="editor"
+  default="<p>これは上記のメインタイトルに合わせた<br>サイズが小さいリードテキストです。</p>"
+  editor:update:required="1"
+  editor:register="0"
+>
+
+
+<mt:Var
+  name="theme_toppage_selected_entries"
+  editor:label="ピックアップ記事"
+  editor:type="list"
+  editor:resource:type="entry"
+  editor:update:fetch="1"
+  editor:update:selector=".MTSE-selected-entries"
+  editor:register="0"
+>
+
+<mt:Var
+  name="theme_toppage_selected_webpages"
+  editor:label="ピックアップウェブページ"
+  editor:type="list"
+  editor:resource:type="page"
+  editor:update:fetch="1"
+  editor:update:selector=".MTSE-selected-webpages"
+  editor:register="0"
+>
+
+<mt:Var
+  name="theme_placeholder"
+  editor:label="ピックアップウェブページのメイン画像のデフォルト画像"
+  editor:type="image"
+  editor:mode="editor"
+  editor:update:fetch="1"
+  editor:update:selector=".MTSE-selected-webpages"
+>
+
+<mt:Var
+  name="theme_toppage_latest_entries_limit"
+  editor:label="最新記事の件数"
+  editor:type="number"
+  default="3"
+  editor:update:fetch="1"
+  editor:update:selector=".MTSE-latest-entries"
+  editor:update:html="$theme_entry_item_template"
+  editor:register="0"
+>

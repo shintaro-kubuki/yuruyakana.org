@@ -1,0 +1,47 @@
+<mt:Ignore>==================================================
+Set Variables
+==================================================</mt:Ignore>
+<mt:Unless name="title_tag">
+  <$mt:Var name="title_tag" value="h2"$>
+</mt:Unless>
+
+<mt:Asset id="$theme_placeholder">
+  <$mt:AssetThumbnailURL width="640" setvar="page_main_img_src"$>
+  <$mt:AssetProperty property="image_width" setvar="page_main_img_width"$>
+  <$mt:AssetProperty property="image_height" setvar="page_main_img_height"$>
+<mt:Else>
+  <mt:SetVarBlock name="page_main_img_src"><$mt:BlogURL$>/assets/img/placeholder.svg</mt:SetVarBlock>
+  <$mt:Var name="page_main_img_width" value="1440"$>
+  <$mt:Var name="page_main_img_height" value="960"$>
+</mt:Asset>
+
+<mt:CustomFieldAsset identifier="page_main_img">
+  <$mt:AssetThumbnailURL width="640" setvar="page_main_img_src"$>
+  <$mt:AssetProperty property="image_width" setvar="page_main_img_width"$>
+  <$mt:AssetProperty property="image_height" setvar="page_main_img_height"$>
+</mt:CustomFieldAsset>
+
+
+<mt:Ignore>==================================================
+Output
+==================================================</mt:Ignore>
+<article class="theme-webpage-item MTSE-webpage-item" aria-labelledby="page-<$mt:PageID$>">
+  <a class="theme-webpage-item-grid theme-webpage-item-link MTSE-webpage-item__link" href="<$mt:PagePermalink$>">
+    <<$mt:Var name="title_tag"$> class="theme-webpage-item-title MTSE-webpage-item__title" id="page-<$mt:PageID$>">
+      <$mt:PageTitle$>
+    </<$mt:Var name="title_tag"$>>
+
+    <picture class="theme-webpage-item-thumb">
+      <img
+        class="theme-webpage-item-img"
+        src="<$mt:Var name="page_main_img_src"$>"
+        alt=""
+        width="<$mt:Var name="page_main_img_width"$>"
+        height="<$mt:Var name="page_main_img_height"$>"
+        loading="lazy"
+      >
+    </picture>
+
+    <p class="theme-webpage-item-desc"><$mt:PageExcerpt no_generate="1"$></p>
+  </a>
+</article>

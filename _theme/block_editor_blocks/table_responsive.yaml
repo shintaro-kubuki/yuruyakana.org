@@ -1,0 +1,59 @@
+addable_block_types: 
+  core-columns: 
+    order: 7
+    panel: 1
+    shortcut: 0
+  core-horizontalrule: 
+    order: 5
+    panel: 1
+    shortcut: 0
+  core-html: 
+    order: 3
+    panel: 1
+    shortcut: 0
+  core-table: 
+    order: 6
+    panel: 1
+    shortcut: 0
+  core-text: 
+    order: 0
+    panel: 1
+    shortcut: 1
+  custom-CTA: 
+    order: 9
+    panel: 1
+    shortcut: 0
+  custom-button: 
+    order: 8
+    panel: 1
+    shortcut: 0
+  custom-heading: 
+    order: 11
+    panel: 1
+    shortcut: 0
+  custom-section: 
+    order: 10
+    panel: 1
+    shortcut: 0
+  mt-file: 
+    order: 2
+    panel: 1
+    shortcut: 1
+  mt-image: 
+    order: 1
+    panel: 1
+    shortcut: 1
+  sixapart-oembed: 
+    order: 4
+    panel: 1
+    shortcut: 0
+can_remove_block: 0
+class_name: table-responsive
+html: <!-- mt-beb t="core-table" --><!-- /mt-beb -->
+icon: ''
+identifier: table_responsive
+label: "レスポンシブ対応テーブル "
+preview_header: "<script>\r\ndocument.addEventListener('DOMContentLoaded', async () => {\r\n  if ( document.body.dataset.hasCompiledHtml ) return\r\n\r\n  document.querySelector('table')?.classList.add('table')\r\n  document.querySelector('table colgroup')?.remove()\r\n  document.querySelector('table')?.removeAttribute('border')\r\n  document.querySelector('table')?.removeAttribute('style')\r\n\r\n  MTBlockEditorSetCompiledHtml(document.body.innerHTML)\r\n});\r\n</script>"
+root_block: div
+scope: blog
+show_preview: 1

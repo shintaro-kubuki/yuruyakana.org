@@ -1,0 +1,28 @@
+<mt:Ignore>==================================================
+Set Variables
+==================================================</mt:Ignore>
+<mt:Unless name="title_tag">
+  <$mt:Var name="title_tag" value="h2"$>
+</mt:Unless>
+
+
+<mt:Ignore>==================================================
+Output
+==================================================</mt:Ignore>
+<article class="theme-entry-item MTSE-entry-item" aria-labelledby="entry-<$mt:EntryID$>">
+  <<$mt:Var name="title_tag"$> class="theme-entry-item-title" id="entry-<$mt:EntryID$>">
+    <a class="MTSE-entry-item__link MTSE-entry-item__title" href="<$mt:EntryPermalink$>"><$mt:EntryTitle encode_html="1"$></a>
+  </<$mt:Var name="title_tag"$>>
+  
+  <p class="theme-entry-item-published">
+    <span class="visually-hidden">記事の公開日</span>
+    <time datetime="<$mt:EntryDate format="%Y-%m-%d"$>"><$mt:EntryDate format="%Y年%m月%d日"$></time>
+  </p>
+
+  <p class="theme-entry-item-categories text-secondary">
+    <span class="visually-hidden">記事のカテゴリ</span>
+    <mt:EntryIfCategory>
+      <a href="<$mt:CategoryArchiveLink$>"><$mt:EntryCategory encode_html="1"$></a>
+    </mt:EntryIfCategory>
+  </p>
+</article>

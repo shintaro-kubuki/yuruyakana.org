@@ -1,0 +1,95 @@
+addable_block_types: 
+  core-columns: 
+    order: 16
+    panel: 0
+    shortcut: 0
+  core-horizontalrule: 
+    order: 20
+    panel: 1
+    shortcut: 0
+  core-html: 
+    order: 19
+    panel: 1
+    shortcut: 0
+  core-table: 
+    order: 14
+    panel: 0
+    shortcut: 0
+  core-text: 
+    order: 0
+    panel: 1
+    shortcut: 0
+  custom-CTA: 
+    order: 13
+    panel: 1
+    shortcut: 0
+  custom-accordion: 
+    order: 8
+    panel: 1
+    shortcut: 0
+  custom-accordion_item: 
+    order: 9
+    panel: 0
+    shortcut: 0
+  custom-button: 
+    order: 4
+    panel: 1
+    shortcut: 0
+  custom-chat_item: 
+    order: 7
+    panel: 0
+    shortcut: 0
+  custom-chats: 
+    order: 6
+    panel: 1
+    shortcut: 0
+  custom-code: 
+    order: 5
+    panel: 1
+    shortcut: 0
+  custom-file: 
+    order: 12
+    panel: 1
+    shortcut: 0
+  custom-image: 
+    order: 1
+    panel: 0
+    shortcut: 0
+  custom-link: 
+    order: 3
+    panel: 1
+    shortcut: 0
+  custom-multi_columns: 
+    order: 17
+    panel: 1
+    shortcut: 0
+  custom-pdf: 
+    order: 10
+    panel: 1
+    shortcut: 0
+  custom-table_responsive: 
+    order: 15
+    panel: 1
+    shortcut: 0
+  mt-file: 
+    order: 11
+    panel: 0
+    shortcut: 0
+  mt-image: 
+    order: 2
+    panel: 1
+    shortcut: 0
+  sixapart-oembed: 
+    order: 18
+    panel: 1
+    shortcut: 0
+can_remove_block: 1
+class_name: theme-block theme-block-section theme-prose
+html: ''
+icon: ''
+identifier: section
+label: "背景付きセクション"
+preview_header: ''
+root_block: div
+scope: blog
+show_preview: 1

@@ -1,0 +1,111 @@
+addable_block_types: 
+  core-columns: 
+    order: 7
+    panel: 1
+    shortcut: 0
+  core-horizontalrule: 
+    order: 5
+    panel: 1
+    shortcut: 0
+  core-html: 
+    order: 3
+    panel: 1
+    shortcut: 0
+  core-table: 
+    order: 6
+    panel: 1
+    shortcut: 0
+  core-text: 
+    order: 0
+    panel: 1
+    shortcut: 1
+  custom-bgcolor_contents: 
+    order: 13
+    panel: 0
+    shortcut: 0
+  custom-bgimage_contents: 
+    order: 14
+    panel: 0
+    shortcut: 0
+  custom-blog_module: 
+    order: 11
+    panel: 0
+    shortcut: 0
+  custom-contents: 
+    order: 15
+    panel: 0
+    shortcut: 0
+  custom-contents_collumn2: 
+    order: 17
+    panel: 0
+    shortcut: 0
+  custom-contents_collumn3: 
+    order: 18
+    panel: 0
+    shortcut: 0
+  custom-custom_img: 
+    order: 19
+    panel: 1
+    shortcut: 0
+  custom-custom_img_media: 
+    order: 21
+    panel: 0
+    shortcut: 0
+  custom-custom_img_srcset: 
+    order: 22
+    panel: 0
+    shortcut: 0
+  custom-dl: 
+    order: 24
+    panel: 1
+    shortcut: 0
+  custom-dl_unit: 
+    order: 23
+    panel: 1
+    shortcut: 0
+  custom-header_sholder: 
+    order: 12
+    panel: 0
+    shortcut: 0
+  custom-lineimage: 
+    order: 16
+    panel: 0
+    shortcut: 0
+  custom-link_button: 
+    order: 10
+    panel: 0
+    shortcut: 0
+  custom-link_with_title: 
+    order: 20
+    panel: 1
+    shortcut: 0
+  custom-titlearea_large: 
+    order: 8
+    panel: 0
+    shortcut: 0
+  custom-titlearea_midiumn: 
+    order: 9
+    panel: 0
+    shortcut: 0
+  mt-file: 
+    order: 2
+    panel: 1
+    shortcut: 1
+  mt-image: 
+    order: 1
+    panel: 1
+    shortcut: 1
+  sixapart-oembed: 
+    order: 4
+    panel: 1
+    shortcut: 0
+can_remove_block: 0
+class_name: chat-unit
+html: "<!-- mt-beb t=\"core-context\" m='{\"1\":{\"label\":\"画像\",\"className\":\"img\"},\"2\":{\"assetId\":\"\",\"alignment\":\"\",\"width\":\"\"},\"3\":{\"label\":\"画像キャプション\",\"className\":\"figcaption\",\"blockElement\":\"p\"},\"4\":{\"text\":\"\"},\"5\":{\"label\":\"画像の配置\",\"className\":\"img-position\",\"blockElement\":\"p\",\"options\":\"左\\n右\"},\"6\":{\"text\":\"左\"},\"7\":{\"label\":\"メッセージ\",\"className\":\"message\"}}' --><!-- /mt-beb --><!-- mt-beb t=\"mt-image\" m='1,2' --><p class=\"img\"><img src=\"\" alt=\"\" width=\"\" height=\"\" class=\"asset asset-image\" style=\"max-width:100%;height:auto;display:block\"/></p><!-- /mt-beb --><!-- mt-beb t=\"sixapart-input\" m='3,4' --><p class=\"figcaption\"></p><!-- /mt-beb --><!-- mt-beb t=\"sixapart-select\" m='5,6' --><p class=\"img-position\">左</p><!-- /mt-beb --><!-- mt-beb m='7' --><p class=\"message\">チャット本文</p><!-- /mt-beb -->"
+icon: ''
+identifier: chat_item
+label: "チャットアイテム"
+preview_header: "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.1.0/mustache.min.js\" integrity=\"sha512-HYiNpwSxYuji84SQbCU5m9kHEsRqwWypXgJMBtbRSumlx1iBB6QaxgEBZHSHEGM+fKyCX/3Kb5V5jeVXm0OglQ==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\"></script>\r\n<script>\r\ndocument.addEventListener('DOMContentLoaded', async () => {\r\n  if ( document.body.dataset.hasCompiledHtml ) return\r\n\r\n  const $img = document.querySelector('.img img')\r\n  const data = {\r\n    hasImg: '' !== $img.getAttribute('src'),\r\n    img: {\r\n      src: $img.src,\r\n      alt: $img.alt,\r\n      width: $img.width,\r\n      height: $img.height,\r\n      caption: document.querySelector('.figcaption')?.textContent || '',\r\n    },\r\n    'flex-direction': '右' === document.querySelector('.img-position')?.textContent ? 'flex-row-reverse' : '',\r\n    message: document.querySelector('.message')?.innerHTML || '',\r\n  }\r\n\r\n  const template = document.querySelector('#template').innerHTML\r\n  const rendered = Mustache.render(template, data)\r\n  MTBlockEditorSetCompiledHtml(rendered)\r\n});\r\n</script>\r\n\r\n<template id=\"template\">\r\n  <div class=\"theme-block theme-block-chat-item {{flex-direction}}\">\r\n    {{#hasImg}}\r\n      <div class=\"theme-block-chat-item-head\">\r\n        <figure>\r\n          <img class=\"theme-block-chat-item-img\" src=\"{{img.src}}\" alt=\"{{img.alt}}\" width=\"{{img.width}}\" height=\"{{img.height}}\" loading=\"lazy\">\r\n          <figcaption class=\"theme-block-chat-item-caption\">{{img.caption}}</figcaption>\r\n        </figure>\r\n      </div>\r\n    {{/hasImg}}\r\n\r\n    <div class=\"theme-block-chat-item-body theme-prose\">\r\n      {{{message}}}\r\n    </div>\r\n  </div>\r\n</template>"
+root_block: ''
+scope: blog
+show_preview: 1

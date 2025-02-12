@@ -1,0 +1,72 @@
+<$mt:BlogName encode_html="1" setvar="theme_name"$>
+
+<mt:Var
+  name="theme_footer_logo"
+  editor:label="ロゴ画像"
+  editor:type="image"
+  editor:update:attribute="src"
+  editor:update:selector=".MTSE-footer-logo img"
+  editor:if:value="<img>"
+  editor:if:empty="$theme_name"
+  editor:register="0"
+>
+
+<mt:Var
+  name="theme_address"
+  editor:label="連絡先"
+  editor:type="textarea"
+  editor:editor="richtext"
+  editor:mode="editor"
+  default="<p>〒123-4567<br>○○県△△市□□町1-23-45<br>◇◇ビル 6階</p>"
+  editor:update:required="1"
+  editor:register="0"
+>
+
+<mt:Var
+  name="theme_sns_x"
+  editor:label="X"
+  editor:type="url"
+  editor:mode="editor"
+  editor:register="0"
+>
+<mt:Var
+  name="theme_sns_instagram"
+  editor:label="Instagram"
+  editor:type="url"
+  editor:mode="editor"
+  editor:register="0"
+>
+<mt:Var
+  name="theme_sns_facebook"
+  editor:label="Facebook"
+  editor:type="url"
+  editor:mode="editor"
+  editor:register="0"
+>
+
+<mt:SetVarBlock name="theme_sub_menu_item_template">
+  <li class="MTSE-sub-menu-item">
+    <a class="text-reset MTSE-sub-menu-item__title MTSE-sub-menu-item__url"></a>
+  </li>
+</mt:SetVarBlock>
+<mt:Var
+  name="theme_sub_menu_items"
+  editor:label="フッターナビゲーションに表示するウェブページ"
+  editor:type="list"
+  editor:mode="editor"
+  editor:update:selector=".MTSE-sub-menu-item"
+  editor:update:html="$theme_sub_menu_item_template"
+  editor:update:parent:selector=".MTSE-sub-menu"
+  editor:register="0"
+>
+
+
+<mt:Var
+  name="theme_copyright"
+  editor:label="コピーライト"
+  editor:type="text"
+  editor:mode="editor"
+  editor:update:required="1"
+  default="©2003 EXAMPLE INC."
+  editor:register="0"
+>

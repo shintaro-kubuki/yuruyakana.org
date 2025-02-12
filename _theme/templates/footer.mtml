@@ -1,0 +1,127 @@
+<mt:Ignore>==================================================
+Config
+==================================================</mt:Ignore>
+<$mt:Include module="全般設定"$>
+
+
+<mt:Ignore>==================================================
+Set Variables
+==================================================</mt:Ignore>
+<$mt:BlogName encode_html="1" setvar="theme_name"$>
+
+
+<mt:Ignore>==================================================
+Output
+==================================================</mt:Ignore>
+<footer class="bg-dark text-white py-5">
+  <div class="container container-lg">
+    <div class="d-grid gap-5">
+      <p class="fs-4 m-0 theme-footer-logo MTSE-footer-logo">
+        <mt:Var
+          name="theme_footer_logo"
+          editor:label="ロゴ画像"
+          editor:type="image"
+          editor:update:attribute="src"
+          editor:update:selector=".MTSE-footer-logo img"
+          editor:if:value="<img>"
+          editor:if:empty="$theme_name"
+          editor:button:position="-10,-15"
+        >
+        <!-- mt-site-editor-theme_footer_logo -->
+        <mt:If name="theme_footer_logo">
+          <img
+            src="<mt:Asset id="$theme_footer_logo"><$mt:AssetURL$></mt:Asset>"
+            alt="<$mt:Var name="theme_name"$>"
+            width="<mt:Asset id="$theme_footer_logo"><$mt:AssetProperty property="image_width"$></mt:Asset>"
+            height="<mt:Asset id="$theme_footer_logo"><$mt:AssetProperty property="image_height"$></mt:Asset>"
+            decoding="async"
+            fetchPriority="high"
+          >
+        <mt:Else>
+          <!-- mt-site-editor-theme_footer_logo-if-empty -->
+            <$mt:Var name="theme_name"$>
+          <!-- /mt-site-editor-theme_footer_logo-if-empty -->
+        </mt:If>
+        <!-- /mt-site-editor-theme_footer_logo -->
+      </p>
+
+      <address class="mb-0 theme-prose theme-block-margin-0">
+        <mt:Var
+          name="theme_address"
+          editor:label="連絡先"
+          editor:type="contenteditable"
+          editor:editor="richtext"
+          editor:mode="text"
+          default="<p>〒123-4567<br>○○県△△市□□町1-23-45<br>◇◇ビル 6階</p>"
+          editor:button:mode="before"
+          editor:update:required="1"
+          editor:button:position="-10,-15"
+        >
+      </address>
+
+      <nav class="theme-footer-sns-list" aria-label="SNSアカウント">
+        <a
+          class="theme-footer-sns-item"
+          href="<$mt:Var name="theme_sns_x" editor:label="X" editor:mode="attribute" editor:type="text" editor:button:mode="before" editor:button:position="0px,-36px"$>"
+        >
+          <svg class="tw-fill-current" aria-hidden="true" width="18" height="18"><use href="<$mt:BlogURL$>/assets/icon/sprite.svg#x"/></svg>
+          X
+        </a>
+        
+        <a
+          class="theme-footer-sns-item"
+          href="<$mt:Var name="theme_sns_instagram" editor:label="Instagram" editor:mode="attribute" editor:type="text" editor:button:mode="before" editor:button:position="0px,-36px"$>"
+        >
+          <svg class="tw-fill-current" aria-hidden="true" width="18" height="18"><use href="<$mt:BlogURL$>/assets/icon/sprite.svg#instagram"/></svg>
+          Instagram
+        </a>
+
+        <a
+          class="theme-footer-sns-item"
+          href="<$mt:Var name="theme_sns_facebook" editor:label="Facebook" editor:mode="attribute" editor:type="text" editor:button:mode="before" editor:button:position="0px,-36px"$>"
+        >
+          <svg class="tw-fill-current" aria-hidden="true" width="18" height="18"><use href="<$mt:BlogURL$>/assets/icon/sprite.svg#facebook"/></svg>
+          Facebook
+        </a>
+      </nav>
+
+      <nav aria-label="サブナビゲーション">
+        <ul class="d-flex flex-column flex-sm-row flex-wrap column-gap-5 row-gap-2 list-unstyled m-0 small MTSE-sub-menu">
+          <li><a href="<$mt:BlogRelativeURL$>"><$mt:Var name="theme_toppage_title" default="トップページ"$></a></li>
+          <li><a href="<$mt:BlogRelativeURL$>archive/"><$mt:Var name="theme_archive_title" default="お知らせ"$></a></li>
+
+          <mt:Var
+            name="theme_sub_menu_items"
+            editor:label="フッターナビゲーションに表示するウェブページ"
+            editor:type="list"
+            editor:mode="editor"
+            editor:update:selector=".MTSE-sub-menu-item"
+            editor:update:html="$theme_sub_menu_item_template"
+            editor:update:parent:selector=".MTSE-sub-menu"
+            editor:button:position="-10,-15"
+          >
+          <mt:If name="theme_sub_menu_items">
+            <mt:Pages ids="$theme_sub_menu_items">
+              <li class="MTSE-sub-menu-item">
+                <a class="MTSE-sub-menu-item__title MTSE-sub-menu-item__url" href="<$mt:PagePermalink$>"><$mt:PageTitle encode_html="1"$></a>
+              </li>
+            </mt:Pages>
+          </mt:If>
+        </ul>
+      </nav>
+
+      <p class="text-md-end small mb-0">
+        <mt:Var
+          name="theme_copyright"
+          editor:label="コピーライト"
+          editor:type="contenteditable"
+          editor:mode="text"
+          default="©2003 EXAMPLE INC."
+          editor:button:mode="before"
+          editor:update:required="1"
+          editor:button:position="-10,-15"
+        >
+      </p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,90 @@
+<mt:Ignore>==================================================
+Set Variables
+==================================================</mt:Ignore>
+<$mt:Var name="theme_entry_has_previous" value="0"$>
+<$mt:Var name="theme_entry_has_next" value="0"$>
+
+
+<mt:Ignore>==================================================
+Output
+==================================================</mt:Ignore>
+<mt:IncludeBlock module="レイアウト">
+  <div class="container-lg">
+    <$mt:Include module="パンくずリスト"$>
+  </div>
+
+  <main class="py-5 entry-<$mt:EntryID$>">
+    <div class="container-lg">
+      <header class="pb-5 border-bottom vstack row-gap-4">
+        <h1 class="mb-0"><$mt:EntryTitle encode_html="1"$></h1>
+        
+        <mt:If tag="EntryExcerpt" no_generate="1">
+          <div class="text-body-secondary">
+            <p class="m-0"><$mt:EntryExcerpt no_generate="1" remove_html="1" nl2br="1"$></p>
+          </div>
+        </mt:If>
+
+        <div class="d-md-flex align-items-baseline column-gap-4 text-body-secondary">
+          <p class="m-0 flex-shrink-0">
+            <span class="visually-hidden">記事の公開日</span>
+            <$mt:EntryDate format="%Y年%m月%d日"$>
+          </p>
+
+          <mt:EntryIfCategory>
+            <p class="d-flex flex-wrap small fw-bold m-0">
+              <span class="visually-hidden">記事のカテゴリ</span>
+              <mt:EntryCategories glue="、">
+                <a href="<$mt:CategoryArchiveLink$>"><$mt:CategoryLabel encode_html="1"$></a>
+              </mt:EntryCategories>
+            </p>
+          </mt:EntryIfCategory>
+        </div>
+      </header>
+    </div>
+
+    <div class="container mt-5">
+      <div class="theme-blocks theme-prose">
+        <$mt:EntryBody$>
+        <$mt:EntryMore$>
+      </div>
+    </div>
+
+    <nav class="container-lg mt-5" aria-label="ページネーション">
+      <ul class="pagination m-0 text-center">
+        <mt:EntryPrevious>
+          <li class="page-item">
+            <$mt:Var name="theme_entry_has_previous" value="1"$>
+            <a class="page-link" href="<$mt:EntryPermalink$>">前の記事</a>
+          </li>
+        </mt:EntryPrevious>
+
+        <mt:If name="theme_entry_has_previous" eq="0">
+          <li class="page-item disabled">
+            <span class="page-link">前の記事</span>
+          </li>  
+        </mt:If>
+
+        <li class="page-item page-item-index">
+          <a class="page-link" href="<$mt:BlogRelativeURL$>archive/">一覧に戻る</a>
+        </li>
+
+        <mt:EntryNext>
+          <li class="page-item">
+            <$mt:Var name="theme_entry_has_next" value="1"$>
+            <a class="page-link" href="<$mt:EntryPermalink$>">次の記事</a>
+          </li>
+        </mt:EntryNext>
+
+        <mt:If name="theme_entry_has_next" eq="0">
+          <li class="page-item disabled">
+            <span class="page-link">次の記事</span>
+          </li>  
+        </mt:If>
+      </ul>
+    </nav>
+  </main>
+
+  <div class="container-lg">
+    <$mt:Include module="パンくずリスト"$>
+  </div>
+</mt:IncludeBlock>

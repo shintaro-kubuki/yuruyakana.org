@@ -1,0 +1,88 @@
+<mt:Ignore>==================================================
+Config
+==================================================</mt:Ignore>
+<$mt:Include module="全般設定"$>
+
+
+<mt:Ignore>==================================================
+Set Variables
+==================================================</mt:Ignore>
+<$mt:BlogName setvar="theme_meta_title_default"$>
+<$mt:BlogDescription setvar="theme_meta_desc_default"$>
+<$mt:CanonicalURL setvar="theme_meta_url"$>
+
+<mt:Asset id="$theme_favicon">
+  <$mt:AssetURL setvar="theme_favicon_url"$>
+<mt:Else>
+  <$mt:Var name="theme_favicon_url" value=""$>
+</mt:Asset>
+
+<mt:Asset id="$theme_ogp_image">
+  <$mt:AssetURL setvar="theme_ogp_image_url"$>
+<mt:Else>
+  <$mt:Var name="theme_ogp_image_url" value=""$>
+</mt:Asset>
+
+<mt:If name="main_index">
+  <$mt:Var name="theme_meta_title_default" setvar="theme_meta_title"$>
+  <$mt:Var name="theme_meta_desc_default" setvar="theme_meta_desc"$>
+<mt:ElseIf name="category_archive">
+  <mt:SetVarBlock name="theme_meta_title"><$mt:CategoryLabel$>｜<$mt:BlogName$></mt:SetVarBlock>
+  <$mt:CategoryDescription default="$theme_meta_desc_default" setvar="theme_meta_desc"$>
+<mt:ElseIf name="entry_archive">
+  <mt:SetVarBlock name="theme_meta_title"><$mt:EntryTitle$>｜<$mt:BlogName$></mt:SetVarBlock>
+  <mt:EntryThumbnailURL setvar="theme_ogp_image_url">
+  <$mt:EntryExcerpt no_generate="1" default="$theme_meta_desc_default" setvar="theme_meta_desc"$>
+<mt:ElseIf name="page_archive">
+  <mt:SetVarBlock name="theme_meta_title"><$mt:PageTitle$>｜<$mt:BlogName$></mt:SetVarBlock>
+  <$mt:PageExcerpt no_generate="1" default="$theme_meta_desc_default" setvar="theme_meta_desc"$>
+  <mt:CustomFieldAsset identifier="page_main_img">
+    <$mt:AssetURL setvar="theme_ogp_image_url"$>
+  </mt:CustomFieldAsset>
+<mt:Else>
+  <mt:SetVarBlock name="theme_meta_title"><$mt:Var name="theme_archive_title" default="お知らせ"$>｜<$mt:BlogName$></mt:SetVarBlock>
+  <$mt:Var name="theme_meta_desc_default" setvar="theme_meta_desc"$>
+</mt:If>
+
+
+
+<mt:Ignore>==================================================
+Output
+==================================================</mt:Ignore>
+<title><$mt:Var name="theme_meta_title" strip_linefeeds="1" remove_html="1" encode_html="1"$></title>
+
+<meta name="generator" content="<$mt:ProductName version="1"$>">
+<meta name="description" content="<$mt:Var name="theme_meta_desc" strip_linefeeds="1" remove_html="1" encode_html="1"$>">
+<link rel="icon" href="<$mt:Var name="theme_favicon_url"$>">
+<link rel="apple-touch-icon" href="<$mt:Var name="theme_favicon_url"$>">
+<link rel="start" href="<$mt:BlogURL encode_html="1"$>">
+<$mt:CanonicalLink$>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="<$mt:BlogLanguage setvar="blog_lang"$><mt:If name="blog_lang" eq="ja">ja_JP<mt:Else><$mt:Var name="blog_lang"$></mt:If>">
+<meta property="og:title" content="<$mt:Var name="theme_meta_title" strip_linefeeds="1" remove_html="1" encode_html="1"$>">
+<meta property="og:url" content="<$mt:Var name="theme_meta_url" encode_html="1"$>">
+<meta property="og:description" content="<$mt:Var name="theme_meta_desc" strip_linefeeds="1" remove_html="1" encode_html="1"$>">
+<meta property="og:site_name" content="<$mt:BlogName encode_html="1"$>">
+<meta property="og:image" content="<$mt:Var name="theme_ogp_image_url"$>">
+<meta property="fb:app_id" content="<$mt:Var name='theme_facebook_app_id'$>">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@<$mt:Var name='theme_x_id'$>">
+<meta name="twitter:title" content="<$mt:Var name="theme_meta_title" strip_linefeeds="1" remove_html="1" encode_html="1"$>">
+<meta name="twitter:description" content="<$mt:Var name="theme_meta_desc" strip_linefeeds="1" remove_html="1" encode_html="1"$>">
+<meta name="twitter:image" content="<$mt:Var name="theme_ogp_image_url"$>">
+<!-- Microdata -->
+<meta itemprop="description" content="<$mt:Var name="theme_meta_desc" strip_linefeeds="1" remove_html="1" encode_html="1"$>">
+<link itemprop="url" href="<$mt:Var name="theme_meta_url" encode_html="1"$>">
+<link itemprop="image" href="<$mt:Var name="theme_ogp_image_url"$>">
+<$mt:ManifestLink$>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link rel="stylesheet" href="<$mt:BlogRelativeURL$>assets/vendor/bootstrap.min.css">
+<link rel="stylesheet" href="<$mt:BlogRelativeURL$>assets/vendor/tailwind.css">
+<link rel="stylesheet" href="<$mt:BlogRelativeURL$>assets/css/bootstrap.css">
+<link rel="stylesheet" href="<$mt:BlogRelativeURL$>assets/css/theme.css">
+
+<script src="<$mt:BlogRelativeURL$>assets/vendor/bootstrap.bundle.min.js" defer></script>
