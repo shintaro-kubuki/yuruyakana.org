@@ -13,20 +13,11 @@ Set Variables
 <mt:Ignore>==================================================
 Output
 ==================================================</mt:Ignore>
-<footer class="bg-dark text-white py-5">
+<footer class="footer-bg-pink text-white py-5">
   <div class="container container-lg">
     <div class="d-grid gap-5">
       <p class="fs-4 m-0 theme-footer-logo MTSE-footer-logo">
-        <mt:Var
-          name="theme_footer_logo"
-          editor:label="ロゴ画像"
-          editor:type="image"
-          editor:update:attribute="src"
-          editor:update:selector=".MTSE-footer-logo img"
-          editor:if:value="<img>"
-          editor:if:empty="$theme_name"
-          editor:button:position="-10,-15"
-        >
+        <$mt:Var name="theme_footer_logo" editor:label="ロゴ画像" editor:type="image" editor:update:attribute="src" editor:update:selector=".MTSE-footer-logo img" editor:if:value="<img>" editor:if:empty="$theme_name" editor:button:position="-10,-15"$>
         <!-- mt-site-editor-theme_footer_logo -->
         <mt:If name="theme_footer_logo">
           <img
@@ -46,17 +37,7 @@ Output
       </p>
 
       <address class="mb-0 theme-prose theme-block-margin-0">
-        <mt:Var
-          name="theme_address"
-          editor:label="連絡先"
-          editor:type="contenteditable"
-          editor:editor="richtext"
-          editor:mode="text"
-          default="<p>〒123-4567<br>○○県△△市□□町1-23-45<br>◇◇ビル 6階</p>"
-          editor:button:mode="before"
-          editor:update:required="1"
-          editor:button:position="-10,-15"
-        >
+        <$mt:Var name="theme_address" editor:label="連絡先" editor:type="contenteditable" editor:editor="richtext" editor:mode="text" default="<p>〒123-4567<br>○○県△△市□□町1-23-45<br>◇◇ビル 6階</p>" editor:button:mode="before" editor:update:required="1" editor:button:position="-10,-15"$>
       </address>
 
       <nav class="theme-footer-sns-list" aria-label="SNSアカウント">
@@ -67,7 +48,7 @@ Output
           <svg class="tw-fill-current" aria-hidden="true" width="18" height="18"><use href="<$mt:BlogURL$>/assets/icon/sprite.svg#x"/></svg>
           X
         </a>
-        
+
         <a
           class="theme-footer-sns-item"
           href="<$mt:Var name="theme_sns_instagram" editor:label="Instagram" editor:mode="attribute" editor:type="text" editor:button:mode="before" editor:button:position="0px,-36px"$>"
@@ -90,16 +71,7 @@ Output
           <li><a href="<$mt:BlogRelativeURL$>"><$mt:Var name="theme_toppage_title" default="トップページ"$></a></li>
           <li><a href="<$mt:BlogRelativeURL$>archive/"><$mt:Var name="theme_archive_title" default="お知らせ"$></a></li>
 
-          <mt:Var
-            name="theme_sub_menu_items"
-            editor:label="フッターナビゲーションに表示するウェブページ"
-            editor:type="list"
-            editor:mode="editor"
-            editor:update:selector=".MTSE-sub-menu-item"
-            editor:update:html="$theme_sub_menu_item_template"
-            editor:update:parent:selector=".MTSE-sub-menu"
-            editor:button:position="-10,-15"
-          >
+          <$mt:Var name="theme_sub_menu_items" editor:label="フッターナビゲーションに表示するウェブページ" editor:type="list" editor:mode="editor" editor:update:selector=".MTSE-sub-menu-item" editor:update:html="$theme_sub_menu_item_template" editor:update:parent:selector=".MTSE-sub-menu" editor:button:position="-10,-15"$>
           <mt:If name="theme_sub_menu_items">
             <mt:Pages ids="$theme_sub_menu_items">
               <li class="MTSE-sub-menu-item">
@@ -113,16 +85,7 @@ Output
     </div>
   </div>
   <p class="text-center small my-4">
-    <mt:Var
-      name="theme_copyright"
-      editor:label="コピーライト"
-      editor:type="contenteditable"
-      editor:mode="text"
-      default="©2003 EXAMPLE INC."
-      editor:button:mode="before"
-      editor:update:required="1"
-      editor:button:position="-10,-15"
-    >
+    <$mt:Var name="theme_copyright" editor:label="コピーライト" editor:type="contenteditable" editor:mode="text" default="©2003 EXAMPLE INC." editor:button:mode="before" editor:update:required="1" editor:button:position="-10,-15"$>
   </p>
   <div>
     <div class="text-center"><a href="https://movabletype.net/" target="_blank"><img src="https://movabletype.net/banner/png/poweredbymtnet_white.png" width="300" height="91" alt="MovableType.net - 安心・高速・サーバー不要のSaaS型 本格CMS" border="0"></a></div>
