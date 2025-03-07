@@ -4,10 +4,10 @@ Set Variables
 <mt:SetVarBlock name="theme_hero_pic_template">
   <img
     class="d-block mx-auto"
-    src="<mt:Asset id="$theme_hero_pic"><$mt:AssetURL$></mt:Asset>"
+    src="<mt:Asset id="$theme_hero_pic"><mt:AssetURL/></mt:Asset>"
     alt=""
-    width="<mt:Asset id="$theme_hero_pic"><$mt:AssetProperty property="image_width"$></mt:Asset>"
-    height="<mt:Asset id="$theme_hero_pic"><$mt:AssetProperty property="image_height"$></mt:Asset>"
+    width="<mt:Asset id="$theme_hero_pic"><mt:AssetProperty property="image_width"/></mt:Asset>"
+    height="<mt:Asset id="$theme_hero_pic"><mt:AssetProperty property="image_height"/></mt:Asset>"
     decoding="async"
     fetchpriority="high"
   >
@@ -19,11 +19,11 @@ Set Variables
 </mt:SetVarBlock>
 
 <mt:SetVarTemplate name="theme_entry_item_template">
-  <$mt:Include module="記事アイテム" title_tag="h3"$>
+  <mt:Include module="記事アイテム" title_tag="h3"/>
 </mt:SetVarTemplate>
 
 <mt:SetVarTemplate name="theme_webpage_item_template">
-  <$mt:Include module="ウェブページアイテム" title_tag="h3"$>
+  <mt:Include module="ウェブページアイテム" title_tag="h3"/>
 </mt:SetVarTemplate>
 
 
@@ -31,29 +31,21 @@ Set Variables
 Output
 ==================================================</mt:Ignore>
 <mt:IncludeBlock module="レイアウト">
-  <$mt:Include module="全般設定"$>
+  <mt:Include module="全般設定"/>
 
   <main>
-    <h1 class="visually-hidden"><$mt:BlogName$></h1>
+    <h1 class="visually-hidden"><mt:BlogName/></h1>
     
     <div class="theme-hero MTSE-hero">
       <picture class="theme-hero-pic MTSE-hero-pic">
-        <mt:Var
-          name="theme_hero_pic"
-          editor:label="メイン画像"
-          editor:type="image"
-          editor:update:attribute="src"
-          editor:update:selector=".MTSE-hero-pic img"
-          editor:if:value="$theme_hero_pic_template"
-          editor:if:empty="$theme_hero_pic_empty_template"
-        >
+        <mt:Var name="theme_hero_pic" editor:label="メイン画像" editor:type="image" editor:update:attribute="src" editor:update:selector=".MTSE-hero-pic img" editor:if:value="$theme_hero_pic_template" editor:if:empty="$theme_hero_pic_empty_template"/>
         <!-- mt-site-editor-theme_hero_pic -->
         <mt:If name="theme_hero_pic">
-          <$mt:Var name="theme_hero_pic_template"$>
+          <mt:Var name="theme_hero_pic_template"/>
         <mt:Else>
           <mt:If name="is_site_editor">
             <!-- mt-site-editor-theme_hero_pic-if-empty -->
-              <$mt:Var name="theme_hero_pic_empty_template"$>
+              <mt:Var name="theme_hero_pic_empty_template"/>
             <!-- /mt-site-editor-theme_hero_pic-if-empty -->
           </mt:If>
         </mt:If>
@@ -63,47 +55,23 @@ Output
 
       <div class="theme-hero-body">
         <div class="theme-hero-text theme-hero-text-large">
-          <mt:Var
-            name="theme_hero_text_main"
-            editor:label="メインキャッチコピー"
-            editor:type="contenteditable"
-            editor:editor="richtext"
-            editor:mode="text"
-            default="<p>Movable Type.net の<br>標準テーマ</p>"
-            editor:update:required="1"
-          >
+          <mt:Var name="theme_hero_text_main" editor:label="メインキャッチコピー" editor:type="contenteditable" editor:editor="richtext" editor:mode="text" default="<p>Movable Type.net の<br>標準テーマ</p>" editor:update:required="1"/>
         </div>
         <div class="theme-hero-text">
-          <mt:Var
-            name="theme_hero_text_sub"
-            editor:label="キャッチコピー概要"
-            editor:type="contenteditable"
-            editor:editor="richtext"
-            editor:mode="text"
-            default="<p>これは上記のメインタイトルに合わせた<br>サイズが小さいリードテキストです。</p>"
-            editor:update:required="1"
-          >
+          <mt:Var name="theme_hero_text_sub" editor:label="キャッチコピー概要" editor:type="contenteditable" editor:editor="richtext" editor:mode="text" default="<p>これは上記のメインタイトルに合わせた<br>サイズが小さいリードテキストです。</p>" editor:update:required="1"/>
         </div>
       </div>
     </div>  
 
     <div class="container-lg">
       <section class="MTSE-selected-entries">
-        <mt:Var
-          name="theme_toppage_selected_entries"
-          editor:label="ピックアップ記事"
-          editor:type="list"
-          editor:resource:type="entry"
-          editor:update:fetch="1"
-          editor:update:selector=".MTSE-selected-entries"
-          editor:button:position="-10,-15"
-        >
+        <mt:Var name="theme_toppage_selected_entries" editor:label="ピックアップ記事" editor:type="list" editor:resource:type="entry" editor:update:fetch="1" editor:update:selector=".MTSE-selected-entries" editor:button:position="-10,-15"/>
         <mt:If name="theme_toppage_selected_entries">
           <h2 class="visually-hidden">ピックアップ<$mt:Var name="theme_archive_title" default="お知らせ"$></h2>
 
           <div class="theme-entries theme-entries-hide-meta column-gap-5 border-bottom">
             <mt:Entries ids="$theme_toppage_selected_entries">
-              <$mt:Var name="theme_entry_item_template"$>
+              <mt:Var name="theme_entry_item_template"/>
             </mt:Entries>
           </div>
         <mt:Else>
@@ -114,57 +82,41 @@ Output
         </mt:If>
       </section>
 
-      <section class="MTSE-selected-webpages tw-my-24">
-        <mt:Var
-          name="theme_toppage_selected_webpages"
-          editor:label="ピックアップウェブページ"
-          editor:type="list"
-          editor:resource:type="page"
-          editor:update:fetch="1"
-          editor:update:selector=".MTSE-selected-webpages"
-          editor:button:position="-10,-15"
-        >
+      <div class="MTSE-selected-webpages">
+        <mt:Var name="theme_toppage_selected_webpages" editor:label="ピックアップウェブページ" editor:type="list" editor:resource:type="page" editor:update:fetch="1" editor:update:selector=".MTSE-selected-webpages" editor:button:position="-10,-15"/>
         <mt:If name="theme_toppage_selected_webpages">
           <h2 class="visually-hidden">ピックアップページ</h2>
-
-          <div class="theme-webpages theme-block-columns">
-            <mt:Pages ids="$theme_toppage_selected_webpages">
-              <$mt:Var name="theme_webpage_item_template"$>
-            </mt:Pages>
-          </div>
+          <mt:Pages ids="$theme_toppage_selected_webpages">
+            <section class="tw-my-24">
+              <h2 class="m-0"><mt:PageTitle/></h2>
+              <mt:PageBody/>
+            </section>
+          </mt:Pages>
         <mt:Else>
           <mt:If name="is_site_editor">
             <h2>ピックアップページ</h2>
             <p>かんたんデザイン編集で、ピックアップしたいウェブページを設定することができます。</p>
           </mt:If>
         </mt:If>
-      </section>
+      </div>
 
       <section class="MTSE-latest-entries tw-my-24">
-        <mt:Var
-          name="theme_toppage_latest_entries_limit"
-          editor:label="最新記事の件数"
-          editor:type="number"
-          default="3"
-          editor:update:fetch="1"
-          editor:update:selector=".MTSE-latest-entries"
-          editor:button:position="-10,-15"
-        >
+        <mt:Var name="theme_toppage_latest_entries_limit" editor:label="最新記事の件数" editor:type="number" default="3" editor:update:fetch="1" editor:update:selector=".MTSE-latest-entries" editor:button:position="-10,-15"/>
         <mt:Unless name="theme_toppage_latest_entries_limit">
-          <$mt:Var name="theme_toppage_latest_entries_limit" value="3"$>
+          <mt:Var name="theme_toppage_latest_entries_limit" value="3"/>
         </mt:Unless>
 
         <mt:If name="theme_toppage_latest_entries_limit" ge="1">
-          <h2 class="m-0"><$mt:Var name="theme_archive_title" default="お知らせ"$></h2>
+          <h2 class="m-0"><mt:Var name="theme_archive_title" default="お知らせ"/></h2>
 
           <div class="theme-entries column-gap-5 my-5 border-top border-bottom">
             <mt:Entries limit="$theme_toppage_latest_entries_limit">
-              <$mt:Var name="theme_entry_item_template"$>
+              <mt:Var name="theme_entry_item_template"/>
             </mt:Entries>
           </div>
         
           <div class="text-center">
-            <a href="<$mt:BlogRelativeURL$>archive/" class="btn btn-outline-primary">一覧をみる</a>
+            <a href="<mt:BlogRelativeURL/>archive/" class="btn btn-outline-primary">一覧をみる</a>
           </div>
         <mt:Else>
           <mt:If name="is_site_editor">
