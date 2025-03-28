@@ -477,6 +477,18 @@ body.MTSE .theme-hero:not(:has(img)){
 
 .table {
   width: 100%;
-  display: grid;
-  grid-template-columns: 20% 80%;
+  display: table;
 }
+
+.table tr {
+  display: table-row;
+}
+
+.table td:nth-child(1) {
+  width: 20%;
+}
+
+.table td:nth-child(2) {
+  width: 80%;
+}
+
